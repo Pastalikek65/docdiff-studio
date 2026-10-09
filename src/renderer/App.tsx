@@ -270,14 +270,40 @@ function TextSourceCard({ title, location, image, text, format }: {
 
 function ChangeDetails({ row }: { row: ComparisonRowV2 }) {
   if (!row.beforeCells && !row.afterCells) return null;
+  const cellChanges = row.cellChanges ?? [];
+  const changedCellCount = cellChanges.filter(({ beforeCellIndex, afterCellIndex, changes }) => {
+    const structuralChange = (beforeCellIndex === null) !== (afterCellIndex === null);
+    return structuralChange || changes.some(({ kind }) => kind !== 'equal');
+  }).length;
+  const addedCellIndexes = new Set<number>();
+  const removedCellIndexes = new Set<number>();
+  for (const change of cellChanges) {
+    if (change.beforeCellIndex === null && change.afterCellIndex !== null) addedCellIndexes.add(change.afterCellIndex);
+    if (change.beforeCellIndex !== null && change.afterCellIndex === null) removedCellIndexes.add(change.beforeCellIndex);
+  }
+  const cellChangeLabel = (side: 'before' | 'after', index: number) => {
+    const isAdded = side === 'after' && addedCellIndexes.has(index);
+    const isRemoved = side === 'before' && removedCellIndexes.has(index);
+    if (isAdded) return `Added · after position ${index + 1}`;
+    if (isRemoved) return `Removed · before position ${index + 1}`;
+    return null;
+  };
+  const renderCells = (side: 'before' | 'after', cells: string[]) => (
+    <ol>{cells.map((cell, index) => {
+      const label = cellChangeLabel(side, index);
+      return <li key={`${side}-${index}`}><span>{cell || 'Empty cell'}</span>{label && <small className="cell-change-label">{label}</small>}</li>;
+    })}</ol>
+  );
   return (
     <section className="table-cell-review" aria-label="Table row cell comparison">
       <h4>Table row cells</h4>
       <div className="table-cell-columns">
-        <div><strong>Before</strong><ol>{(row.beforeCells ?? []).map((cell, index) => <li key={`before-${index}`}>{cell || 'Empty cell'}</li>)}</ol></div>
-        <div><strong>After</strong><ol>{(row.afterCells ?? []).map((cell, index) => <li key={`after-${index}`}>{cell || 'Empty cell'}</li>)}</ol></div>
+        <div><strong>Before</strong>{renderCells('before', row.beforeCells ?? [])}</div>
+        <div><strong>After</strong>{renderCells('after', row.afterCells ?? [])}</div>
       </div>
-      {row.cellChanges?.length ? <p>{row.cellChanges.length} cell{row.cellChanges.length === 1 ? '' : 's'} changed. Cell positions are shown in source order.</p> : <p>No cell-level text change was reported.</p>}
+      {changedCellCount > 0
+        ? <p>{changedCellCount} of {cellChanges.length} cell{cellChanges.length === 1 ? '' : 's'} changed. Cell positions are shown in source order.</p>
+        : <p>{cellChanges.length > 0 ? `No cell-level text change was reported across ${cellChanges.length} compared cell${cellChanges.length === 1 ? '' : 's'}.` : 'No cell-level text change was reported.'}</p>}
     </section>
   );
 }

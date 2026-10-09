@@ -7,6 +7,7 @@
 - Read selected image-only PDF pages with the bundled English OCR engine and model. Confidence remains heuristic and matching OCR text remains uncertain.
 - Process up to 20 pairs sequentially, cancel the active worker, and export successful, failed, cancelled and not-run jobs in versioned batch JSON.
 - Preserve the schema-1 PDF API while adding explicit schema-2 PDF/DOCX reports, bounded input/output processing and local-only OCR assets.
+- Count changed table cells accurately and retain empty-cell additions/removals when whitespace is ignored, with explicit positions in the review and HTML report.
 
 Source acceptance has passed on Windows. This entry describes a candidate; exact Windows/Linux package qualification and beta publication are pending. See [verification](docs/verification.md).
 

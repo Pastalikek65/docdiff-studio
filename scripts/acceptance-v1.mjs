@@ -150,9 +150,12 @@ try {
   await window.getByRole('button', { name: 'Save selected HTML' }).focus();
   await window.keyboard.press('Alt+ArrowDown');
   await window.waitForFunction(previous => document.querySelector('.change-item[aria-current="page"]')?.getAttribute('aria-label') !== previous, firstChangeLabel);
+  await window.waitForFunction(() => document.querySelector('.change-item[aria-current="page"]') === document.activeElement, undefined, { timeout: 3000 });
   assert.equal(await selectedChange.evaluate(element => element === document.activeElement), true);
   await window.keyboard.press('Alt+ArrowUp');
   await window.waitForFunction(previous => document.querySelector('.change-item[aria-current="page"]')?.getAttribute('aria-label') === previous, firstChangeLabel);
+  await window.waitForFunction(() => document.querySelector('.change-item[aria-current="page"]') === document.activeElement, undefined, { timeout: 3000 });
+  assert.equal(await selectedChange.evaluate(element => element === document.activeElement), true);
   steps.push('keyboard change navigation moves focus and returns to the original DOCX change');
   const moved = await compare('docx-move-before.docx', 'docx-move-after.docx');
   assert.equal(moved.summary.moved, 1);

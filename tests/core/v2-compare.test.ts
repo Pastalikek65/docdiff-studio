@@ -99,6 +99,38 @@ describe('version 2 document comparison', () => {
     expect(result.summary).toEqual({ unchanged: 3, changed: 0, added: 0, removed: 0, moved: 0 });
   });
 
+  it('marks added and removed empty table cells as structural changes when whitespace is ignored', async () => {
+    const oneCell = '<w:tbl><w:tr><w:tc><w:p><w:r><w:t>A</w:t></w:r></w:p></w:tc></w:tr></w:tbl>';
+    const twoCells = '<w:tbl><w:tr><w:tc><w:p><w:r><w:t>A</w:t></w:r></w:p></w:tc><w:tc><w:p/></w:tc></w:tr></w:tbl>';
+    const options = { ...DEFAULT_COMPARE_OPTIONS_V2, ignoreWhitespace: true };
+    const added = await compareDocumentsV2({ ...request(docx(oneCell), docx(twoCells)), options });
+    const removed = await compareDocumentsV2({ ...request(docx(twoCells), docx(oneCell)), options });
+
+    expect(added.rows).toHaveLength(1);
+    expect(added.rows[0]).toMatchObject({
+      status: 'changed',
+      beforeCells: ['A'],
+      afterCells: ['A', ''],
+      cellChanges: [
+        { beforeCellIndex: 0, afterCellIndex: 0 },
+        { beforeCellIndex: null, afterCellIndex: 1, changes: [{ kind: 'equal', text: '' }] },
+      ],
+    });
+    expect(added.summary).toEqual({ unchanged: 0, changed: 1, added: 0, removed: 0, moved: 0 });
+
+    expect(removed.rows).toHaveLength(1);
+    expect(removed.rows[0]).toMatchObject({
+      status: 'changed',
+      beforeCells: ['A', ''],
+      afterCells: ['A'],
+      cellChanges: [
+        { beforeCellIndex: 0, afterCellIndex: 0 },
+        { beforeCellIndex: 1, afterCellIndex: null, changes: [{ kind: 'equal', text: '' }] },
+      ],
+    });
+    expect(removed.summary).toEqual({ unchanged: 0, changed: 1, added: 0, removed: 0, moved: 0 });
+  });
+
   it('never reports identical when a document contains unsupported text-bearing OOXML', async () => {
     const body = '<w:p><w:r><w:t>Visible text</w:t></w:r></w:p><w:altChunk r:id="chunk1"/>';
     const result = await compareDocumentsV2(request(docx(body), docx(body)));

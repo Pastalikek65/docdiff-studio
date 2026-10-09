@@ -285,6 +285,7 @@ function rowFromBlocks(left: DocxBlock | undefined, right: DocxBlock | undefined
     ? compareCells(beforeCells, afterCells, options)
     : undefined;
   const changed = changes.some((change) => change.kind !== 'equal')
+    || Boolean(cellChanges?.some((cell) => cell.beforeCellIndex === null || cell.afterCellIndex === null))
     || Boolean(cellChanges?.some((cell) => cell.changes.some((change) => change.kind !== 'equal')));
   const status = !left ? 'added' : !right ? 'removed' : changed ? 'changed' : 'unchanged';
   return {

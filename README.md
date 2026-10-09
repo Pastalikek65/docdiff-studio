@@ -10,7 +10,7 @@ DocDiff is for reviewing revised manuals, proposals and other documents where a 
 
 See the [generated example HTML report](examples/outputs/comparison.html) or compare the included PDFs yourself. The screenshot and report come from the real desktop acceptance flow.
 
-The v1 candidate also has a real [DOCX paragraph/table review](examples/outputs/docx-review.png), [DOCX HTML report](examples/outputs/docx-comparison.html) and [local OCR review](examples/outputs/ocr-review.png) from a freshly extracted Windows beta-candidate ZIP. These examples show current behavior; Linux and stable-release qualification are pending.
+The v1 candidate also has a real [DOCX paragraph/table review](examples/outputs/docx-review.png), [DOCX HTML report](examples/outputs/docx-comparison.html) and [local OCR review](examples/outputs/ocr-review.png) from its actual Windows desktop flow. These examples show current behavior; exact release-package and stable-release qualification are pending.
 
 ## Install the PDF preview
 

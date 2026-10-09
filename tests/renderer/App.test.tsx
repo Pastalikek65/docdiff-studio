@@ -186,6 +186,112 @@ describe('document review workspace v2', () => {
     expect(screen.getByText('Before: DOCX text')).toBeTruthy();
   });
 
+  it('counts changed table cells separately from all compared cells', async () => {
+    ControlledWorker.resultFactory = () => {
+      const result = makeDocxMoveResult();
+      const equalCellChange = (index: number, text: string) => ({
+        beforeCellIndex: index,
+        afterCellIndex: index,
+        changes: [{ kind: 'equal' as const, text }],
+      });
+      return {
+        ...result,
+        rows: [{
+          ...result.rows[0],
+          id: 'table-row-1',
+          status: 'changed',
+          moveId: undefined,
+          beforeLocation: { format: 'docx', kind: 'table-row', index: 0, tableIndex: 0, rowIndex: 0 },
+          afterLocation: { format: 'docx', kind: 'table-row', index: 0, tableIndex: 0, rowIndex: 0 },
+          beforeText: 'Widget A 2 500',
+          afterText: 'Widget A 2 600',
+          beforeCells: ['Widget A', '2', '500'],
+          afterCells: ['Widget A', '2', '600'],
+          changes: [
+            { kind: 'equal', text: 'Widget A 2 ' },
+            { kind: 'removed', text: '500' },
+            { kind: 'added', text: '600' },
+          ],
+          cellChanges: [
+            equalCellChange(0, 'Widget A'),
+            equalCellChange(1, '2'),
+            {
+              beforeCellIndex: 2,
+              afterCellIndex: 2,
+              changes: [{ kind: 'removed', text: '500' }, { kind: 'added', text: '600' }],
+            },
+          ],
+        }],
+        summary: { unchanged: 0, changed: 1, added: 0, removed: 0, moved: 0 },
+      };
+    };
+    const user = userEvent.setup();
+    const { container } = render(<App />);
+    await uploadPair(container, new File(['before'], 'before.docx'), new File(['after'], 'after.docx'));
+    await user.click(screen.getByRole('button', { name: /Compare pair/ }));
+
+    expect(await screen.findByText(/1 of 3 cells changed/)).toBeTruthy();
+    expect(screen.getAllByText('Widget A')).toHaveLength(2);
+    expect(screen.getAllByText('500').length).toBeGreaterThan(0);
+    expect(screen.getAllByText('600').length).toBeGreaterThan(0);
+  });
+
+  it('counts structural empty-cell additions and removals and labels their positions', async () => {
+    const baseRow = makeDocxMoveResult().rows[0];
+    const addedEmptyCell: ComparisonResultV2['rows'][number] = {
+      ...baseRow,
+      id: 'table-row-added-empty-cell',
+      status: 'changed',
+      moveId: undefined,
+      beforeLocation: { format: 'docx', kind: 'table-row', index: 0, tableIndex: 0, rowIndex: 0 },
+      afterLocation: { format: 'docx', kind: 'table-row', index: 0, tableIndex: 0, rowIndex: 0 },
+      beforeText: 'Widget A 2', afterText: 'Widget A 2',
+      changes: [{ kind: 'equal', text: 'Widget A 2' }],
+      beforeCells: ['Widget A', '2'],
+      afterCells: ['Widget A', '2', ''],
+      cellChanges: [
+        { beforeCellIndex: 0, afterCellIndex: 0, changes: [{ kind: 'equal', text: 'Widget A' }] },
+        { beforeCellIndex: 1, afterCellIndex: 1, changes: [{ kind: 'equal', text: '2' }] },
+        { beforeCellIndex: null, afterCellIndex: 2, changes: [{ kind: 'equal', text: '' }] },
+      ],
+    };
+    const removedEmptyCell: ComparisonResultV2['rows'][number] = {
+      ...baseRow,
+      id: 'table-row-removed-empty-cell',
+      status: 'changed',
+      moveId: undefined,
+      beforeLocation: { format: 'docx', kind: 'table-row', index: 1, tableIndex: 0, rowIndex: 1 },
+      afterLocation: { format: 'docx', kind: 'table-row', index: 1, tableIndex: 0, rowIndex: 1 },
+      beforeText: 'Widget B 2', afterText: 'Widget B 2',
+      changes: [{ kind: 'equal', text: 'Widget B 2' }],
+      beforeCells: ['Widget B', '2', ''],
+      afterCells: ['Widget B', '2'],
+      cellChanges: [
+        { beforeCellIndex: 0, afterCellIndex: 0, changes: [{ kind: 'equal', text: 'Widget B' }] },
+        { beforeCellIndex: 1, afterCellIndex: 1, changes: [{ kind: 'equal', text: '2' }] },
+        { beforeCellIndex: 2, afterCellIndex: null, changes: [{ kind: 'equal', text: '' }] },
+      ],
+    };
+    ControlledWorker.resultFactory = () => ({
+      ...makeDocxMoveResult(),
+      rows: [addedEmptyCell, removedEmptyCell],
+      summary: { unchanged: 0, changed: 2, added: 0, removed: 0, moved: 0 },
+    });
+    const user = userEvent.setup();
+    const { container } = render(<App />);
+    await uploadPair(container, new File(['before'], 'before.docx'), new File(['after'], 'after.docx'));
+    await user.click(screen.getByRole('button', { name: /Compare pair/ }));
+
+    expect(await screen.findByText(/1 of 3 cells changed/)).toBeTruthy();
+    expect(screen.getByText('Added · after position 3')).toBeTruthy();
+    expect(screen.getByText('Added · after position 3').closest('li')?.textContent).toContain('Empty cell');
+
+    await user.click(screen.getByRole('button', { name: /Next change/ }));
+    expect(await screen.findByText(/1 of 3 cells changed/)).toBeTruthy();
+    expect(screen.getByText('Removed · before position 3')).toBeTruthy();
+    expect(screen.getByText('Removed · before position 3').closest('li')?.textContent).toContain('Empty cell');
+  });
+
   it('describes incomplete OCR evidence without implying that unit matching failed', async () => {
     ControlledWorker.resultFactory = () => {
       const result = makePdfResult();

@@ -311,6 +311,7 @@ button:disabled { cursor: not-allowed; opacity: .48; }
 .table-cell-columns > div + div { padding-left: 12px; border-left: 1px solid #e4eaf0; }
 .table-cell-columns strong { color: #5b7187; font-size: 10px; }
 .table-cell-columns ol { margin: 6px 0 0; padding-left: 23px; color: #52677b; font-size: 10px; line-height: 1.6; }
+.cell-change-label { display: block; color: #344d66; font-size: 9px; }
 .table-cell-review > p { margin: 9px 0 0; color: #78899a; font-size: 9px; }
 .v2-welcome { min-height: 410px; }
 .empty-feature-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 7px; max-width: 580px; }

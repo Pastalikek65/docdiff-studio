@@ -240,8 +240,21 @@ function renderRow(row: ComparisonRowV2): string {
   const afterLabel = locationLabel(row.afterLocation);
   const image = (src: string | undefined, alt: string) => src ? `<img class="page-image" alt="${escapeHtml(alt)}" src="${src}">` : '';
   const changes = row.changes.map((change) => `<span class="${change.kind}">${escapeHtml(change.text)}</span>`).join('');
-  const cells = (label: string, values: string[] | undefined) => values
-    ? `<section><h3>${label} cells</h3>${values.map((cell, index) => `<div class="cell"><strong>Cell ${index + 1}</strong><div>${escapeHtml(cell)}</div></div>`).join('')}</section>`
+  const addedCellIndexes = new Set<number>();
+  const removedCellIndexes = new Set<number>();
+  for (const cell of row.cellChanges ?? []) {
+    if (cell.beforeCellIndex === null && cell.afterCellIndex !== null) addedCellIndexes.add(cell.afterCellIndex);
+    if (cell.afterCellIndex === null && cell.beforeCellIndex !== null) removedCellIndexes.add(cell.beforeCellIndex);
+  }
+  const cells = (side: 'before' | 'after', values: string[] | undefined) => values
+    ? `<section><h3>${escapeHtml(side === 'before' ? 'Before' : 'After')} cells</h3>${values.map((cell, index) => {
+      const label = side === 'after' && addedCellIndexes.has(index)
+        ? `Added · after position ${index + 1}`
+        : side === 'before' && removedCellIndexes.has(index)
+          ? `Removed · before position ${index + 1}`
+          : `Cell ${index + 1}`;
+      return `<div class="cell"><strong>${escapeHtml(label)}</strong><div>${escapeHtml(cell.trim() ? cell : 'Empty cell')}</div></div>`;
+    }).join('')}</section>`
     : '';
   const visual = row.visual?.diffImageDataUrl
     ? `<section class="visual"><h3>Visual difference</h3><p>${row.visual.changedPixels} of ${row.visual.totalPixels} pixels changed (${(row.visual.ratio * 100).toFixed(2)}%).</p>${image(row.visual.diffImageDataUrl, 'Visual difference overlay')}</section>`
@@ -250,7 +263,7 @@ function renderRow(row: ComparisonRowV2): string {
     const item = row.textEvidence[side];
     return `${side}: ${item.source}${item.confidence === undefined ? '' : ` · OCR confidence estimate ${item.confidence.toFixed(1)}/100`}`;
   };
-  return `<article class="row"><div class="row-head"><h2>${escapeHtml(row.status)} block</h2><span>${escapeHtml(beforeLabel)} → ${escapeHtml(afterLabel)}</span></div><p class="evidence">${escapeHtml(evidence('before'))} · ${escapeHtml(evidence('after'))}</p><div class="columns"><section class="column"><h3>Before</h3>${image(row.beforeImageDataUrl, 'Before PDF page')}<pre class="text">${escapeHtml(row.beforeText)}</pre>${cells('Before', row.beforeCells)}</section><section class="column"><h3>After</h3>${image(row.afterImageDataUrl, 'After PDF page')}<pre class="text">${escapeHtml(row.afterText)}</pre>${cells('After', row.afterCells)}</section></div><section><h3>Text changes</h3><div class="changes">${changes}</div></section>${visual}</article>`;
+  return `<article class="row"><div class="row-head"><h2>${escapeHtml(row.status)} block</h2><span>${escapeHtml(beforeLabel)} → ${escapeHtml(afterLabel)}</span></div><p class="evidence">${escapeHtml(evidence('before'))} · ${escapeHtml(evidence('after'))}</p><div class="columns"><section class="column"><h3>Before</h3>${image(row.beforeImageDataUrl, 'Before PDF page')}<pre class="text">${escapeHtml(row.beforeText)}</pre>${cells('before', row.beforeCells)}</section><section class="column"><h3>After</h3>${image(row.afterImageDataUrl, 'After PDF page')}<pre class="text">${escapeHtml(row.afterText)}</pre>${cells('after', row.afterCells)}</section></div><section><h3>Text changes</h3><div class="changes">${changes}</div></section>${visual}</article>`;
 }
 
 function locationLabel(location: DocumentLocationV2 | null): string {
