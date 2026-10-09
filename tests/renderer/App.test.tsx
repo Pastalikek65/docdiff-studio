@@ -171,4 +171,25 @@ describe('document review workspace', () => {
     expect(screen.queryByRole('heading', { name: 'What changed in the text' })).toBeNull();
     expect(ControlledWorker.latest?.terminated).toBe(true);
   });
+
+  it('terminates the worker and rejects late results after a message decode failure', async () => {
+    ControlledWorker.respond = false;
+    const user = userEvent.setup();
+    const { container } = render(<App />);
+    const [before, after] = selectedPdfs();
+    await user.upload(container.querySelector('#before-file') as HTMLInputElement, before);
+    await user.upload(container.querySelector('#after-file') as HTMLInputElement, after);
+    await user.click(screen.getByRole('button', { name: /Compare PDFs/ }));
+    await waitFor(() => expect(ControlledWorker.latest?.onmessageerror).not.toBeNull());
+    const worker = ControlledWorker.latest!;
+
+    worker.onmessageerror?.({ data: undefined } as MessageEvent);
+    expect(worker.terminated).toBe(true);
+    expect(await screen.findByText(/WORKER_FAILED/)).toBeTruthy();
+    expect(screen.getByRole('button', { name: 'Save HTML' }).hasAttribute('disabled')).toBe(true);
+
+    worker.onmessage?.({ data: { type: 'complete', result: makeResult() } } as MessageEvent);
+    expect(screen.queryByRole('heading', { name: 'What changed in the text' })).toBeNull();
+    expect(screen.getByRole('button', { name: 'Save HTML' }).hasAttribute('disabled')).toBe(true);
+  });
 });

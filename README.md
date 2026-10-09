@@ -28,11 +28,11 @@ Select `examples/corpus/word-number-before.pdf` as Before and `word-number-after
 - Side-by-side page previews, a visual difference layer, and a change list with page navigation.
 - Separate text and appearance comparisons. Ignoring whitespace or selected header/footer lines does not hide visible appearance changes.
 - Middle-page insertions and removals are aligned independently of page numbering.
-- Incomplete or absent text extraction stays visible as **Review needed**; it is never proof that scanned documents have the same text.
+- Pages with no extracted text stay visible as **Review needed**; matching images do not prove that scanned documents have the same text. Partial extraction on a text-bearing page cannot be detected reliably, so inspect the page previews.
 - HTML with embedded images and versioned JSON, generated on this device.
 - Cancellable worker processing, input/page/pixel/text/output limits, and explicit failed states.
 
-Files are read only when selected. The desktop blocks external requests and navigation; parsing happens in a worker inside a sandboxed renderer. Reports contain document text and images, so treat exported reports as copies of potentially private documents. No telemetry or file-upload backend is included.
+Files are read only when selected. The desktop blocks external requests and navigation; parsing happens in a worker inside a sandboxed renderer. Reports contain document names, SHA-256 fingerprints, text and images, so treat exported reports as copies of potentially private documents. No telemetry or file-upload backend is included.
 
 ## Development and evidence
 

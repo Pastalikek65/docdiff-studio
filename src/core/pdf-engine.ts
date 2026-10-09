@@ -3,7 +3,7 @@ import type { PDFDocumentLoadingTask, PDFDocumentProxy, PDFPageProxy } from 'pdf
 import pdfWorkerUrl from 'pdfjs-dist/build/pdf.worker.mjs?url';
 import { alignPages, type PageFeatures } from './alignment';
 import { COMPARISON_LIMITS } from './limits';
-import { renderHtmlReport, serializeReport } from './report';
+import { preflightReportOutputs } from './report';
 import { omitSelectedLines, singleTextChange, textChanges } from './text-diff';
 import { CompareError, type CompareOptions, type CompareProgress, type ComparisonResult, type ComparisonRow, type DocumentInfo } from './types';
 import { sanitizeDocumentName, validateDocuments, validateOptions, type ValidatedDocument } from './validation';
@@ -241,9 +241,10 @@ export async function comparePdfDocuments(
     };
     // Fail at the engine boundary if a future algorithm change grows report data
     // beyond the limits advertised by the UI and save bridge.
-    serializeReport(result);
-    checkTime(startedAt);
-    reportProgress(onProgress, { phase: 'Comparison complete', completed: 1, total: 1 });
+    preflightReportOutputs(result, () => {
+      checkTime(startedAt);
+      reportProgress(onProgress, { phase: 'Comparison complete', completed: 1, total: 1 });
+    });
     return result;
   } finally {
     await Promise.allSettled(opened.map(({ loadingTask }) => loadingTask.destroy()));

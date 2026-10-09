@@ -9,6 +9,13 @@ export function serializeReport(result: ComparisonResult): string {
   return json;
 }
 
+/** Gate the engine's completion notification on every supported export fitting. */
+export function preflightReportOutputs(result: ComparisonResult, onPassed?: () => void): void {
+  serializeReport(result);
+  renderHtmlReport(result);
+  onPassed?.();
+}
+
 export function renderHtmlReport(result: ComparisonResult): string {
   const safe = projectResult(result);
   const statusTitle = safe.outcome === 'uncertain'
