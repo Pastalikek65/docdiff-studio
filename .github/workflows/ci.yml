@@ -109,6 +109,8 @@ jobs:
             release/*.tar.gz
             release/SHA256SUMS.txt
             artifacts/acceptance-*/acceptance.json
+            artifacts/acceptance-*/comparison-*.json
+            artifacts/acceptance-*/comparison-*.html
             artifacts/acceptance-*/failure.json
             artifacts/acceptance-*/review.png
             artifacts/acceptance-*/failure.png

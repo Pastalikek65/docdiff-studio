@@ -2,6 +2,8 @@
 
 ## v1 candidate evidence
 
+[CI 37882439870](https://github.com/Pastalikek65/docdiff-studio/actions/runs/37882439870) passed at source `4ec9b2fc8e85fd56db7090bd624493c0d623f5c7`: 83 tests across 15 files, source startup, and 23-step source/extracted-package flows on both Windows Server 2025 and Ubuntu 24.04. Publication still requires the independently collected assets and notice/provenance checks. A follow-up workflow retains the generated JSON/HTML reports as CI artifacts so that the saved batch states can also be inspected independently. Its exact packages require their own run evidence.
+
 The current Windows source snapshot passed 83 tests across 15 files. A fresh Windows 11 ZIP passed 23 actual Electron steps, including DOCX paragraphs/cells, keyboard change navigation with focus, exact and ambiguous moves, visual changes on moved PDF pages, a 1,500-unit DOCX workload, unsupported/hostile DOCX handling, actual offline OCR, actual OCR-worker destruction on cancellation, controlled missing-model failure, and successful/failed/cancelled/not-run/all-failed batch export. The new v1 corpus has 53 files and 32 cases, manifest SHA-256 `bde10e05089dd820777e0a2557c7aa88e6332b602f2570f14d60c42362ef76b5`. Independent review found and rechecked fixes for moved-page visual loss, custom-path DOCX header omission and stalled OCR model-load failure.
 
 This is pre-freeze Windows evidence. It does not qualify a stable release or Linux behavior. Fresh exact-commit source and extracted-package flows are required before publication. [Measurements](performance.md) state their workload and limitations. A refreshed full development audit records eight moderate build-tool findings and zero high/critical findings; the moderate advisory remains open.

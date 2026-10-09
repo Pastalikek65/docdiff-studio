@@ -2,6 +2,8 @@
 
 Compare two document revisions locally, inspect text and visual changes, and save a report that opens without an account or server.
 
+[![CI](https://github.com/Pastalikek65/docdiff-studio/actions/workflows/ci.yml/badge.svg)](https://github.com/Pastalikek65/docdiff-studio/actions/workflows/ci.yml)
+
 DocDiff is for reviewing revised manuals, proposals and other documents where a changed number, word or page matters. The [published PDF MVP](https://github.com/Pastalikek65/docdiff-studio/releases/tag/v0.1.0) provides Windows and Linux x64 archives. DOCX, local OCR and batch comparison are in development for v1; use the tagged preview for the qualified PDF build. See the [roadmap](docs/roadmap.md).
 
 ![Actual comparison of the synthetic word and number fixtures](examples/outputs/review.png)
