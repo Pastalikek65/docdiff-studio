@@ -1,8 +1,14 @@
-import type { CompareProgress, ComparisonResult } from '../core/types.js';
+import type { CompareProgress, ComparisonResult, ComparisonResultV2, OcrProgressV2 } from '../core/types.js';
 
 export type WorkerResponse =
   | { type: 'progress'; progress: CompareProgress }
   | { type: 'complete'; result: ComparisonResult }
+  | { type: 'error'; code: string; message: string };
+
+export type WorkerResponseV2 =
+  | { type: 'progress'; progress: CompareProgress }
+  | { type: 'ocr-progress'; progress: OcrProgressV2 }
+  | { type: 'complete'; result: ComparisonResultV2 }
   | { type: 'error'; code: string; message: string };
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -49,6 +55,15 @@ function isComparisonResult(value: unknown): value is ComparisonResult {
   return true;
 }
 
+function isComparisonResultV2(value: unknown): value is ComparisonResultV2 {
+  if (!isRecord(value) || value.schemaVersion !== 2 || !Array.isArray(value.rows) || !Array.isArray(value.warnings)) return false;
+  if (value.outcome !== 'identical' && value.outcome !== 'changed' && value.outcome !== 'uncertain') return false;
+  if (value.certainty !== 'complete' && value.certainty !== 'incomplete') return false;
+  if (!isRecord(value.documents) || !isRecord(value.documents.before) || !isRecord(value.documents.after)) return false;
+  if (!isRecord(value.summary) || !isRecord(value.options)) return false;
+  return true;
+}
+
 export function isWorkerResponse(value: unknown): value is WorkerResponse {
   if (!isRecord(value)) return false;
   if (value.type === 'progress') {
@@ -58,5 +73,23 @@ export function isWorkerResponse(value: unknown): value is WorkerResponse {
       typeof progress.total === 'number' && Number.isFinite(progress.total) && progress.total >= 0;
   }
   if (value.type === 'complete') return isComparisonResult(value.result);
+  return value.type === 'error' && typeof value.code === 'string' && typeof value.message === 'string';
+}
+
+export function isWorkerResponseV2(value: unknown): value is WorkerResponseV2 {
+  if (!isRecord(value)) return false;
+  if (value.type === 'progress') {
+    const progress = value.progress;
+    return isRecord(progress) && typeof progress.phase === 'string' &&
+      typeof progress.completed === 'number' && Number.isFinite(progress.completed) && progress.completed >= 0 &&
+      typeof progress.total === 'number' && Number.isFinite(progress.total) && progress.total >= 0;
+  }
+  if (value.type === 'ocr-progress') {
+    const progress = value.progress;
+    return isRecord(progress) && typeof progress.phase === 'string' &&
+      typeof progress.progress === 'number' && Number.isFinite(progress.progress) &&
+      progress.progress >= 0 && progress.progress <= 1;
+  }
+  if (value.type === 'complete') return isComparisonResultV2(value.result);
   return value.type === 'error' && typeof value.code === 'string' && typeof value.message === 'string';
 }

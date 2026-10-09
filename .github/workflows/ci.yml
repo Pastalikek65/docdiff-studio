@@ -78,7 +78,7 @@ jobs:
           $archives = @(Get-ChildItem release -Filter '*.zip')
           if ($archives.Count -ne 1) { throw 'Expected one Windows archive.' }
           Expand-Archive -LiteralPath $archives[0].FullName -DestinationPath artifacts/install
-          node scripts/acceptance.mjs --executable "${pwd}/artifacts/install/DocDiff Studio.exe"
+          node scripts/acceptance-v1.mjs --executable "${pwd}/artifacts/install/DocDiff Studio.exe"
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Linux fresh archive acceptance
         if: runner.os == 'Linux'
@@ -98,7 +98,7 @@ jobs:
           sudo chmod -R go-w /opt/docdiff-ci
           sudo chmod 4755 "${sandboxes[0]}"
           test "$(stat -c '%U:%G:%a' "${sandboxes[0]}")" = 'root:root:4755'
-          xvfb-run --auto-servernum node scripts/acceptance.mjs --executable "${executables[0]}"
+          xvfb-run --auto-servernum node scripts/acceptance-v1.mjs --executable "${executables[0]}"
       - run: node scripts/checksums.mjs
       - uses: actions/upload-artifact@v7.0.2
         if: always()
@@ -112,5 +112,7 @@ jobs:
             artifacts/acceptance-*/failure.json
             artifacts/acceptance-*/review.png
             artifacts/acceptance-*/failure.png
+            artifacts/acceptance-*/docx-review.png
+            artifacts/acceptance-*/ocr-review.png
             artifacts/startup-*/startup.json
             artifacts/startup-*/failure.json

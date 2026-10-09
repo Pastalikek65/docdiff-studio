@@ -1,5 +1,23 @@
 # MVP verification record
 
+## v1 candidate evidence
+
+The current Windows source snapshot passed 83 tests across 15 files. A fresh Windows 11 ZIP passed 23 actual Electron steps, including DOCX paragraphs/cells, keyboard change navigation with focus, exact and ambiguous moves, visual changes on moved PDF pages, a 1,500-unit DOCX workload, unsupported/hostile DOCX handling, actual offline OCR, actual OCR-worker destruction on cancellation, controlled missing-model failure, and successful/failed/cancelled/not-run/all-failed batch export. The new v1 corpus has 53 files and 32 cases, manifest SHA-256 `bde10e05089dd820777e0a2557c7aa88e6332b602f2570f14d60c42362ef76b5`. Independent review found and rechecked fixes for moved-page visual loss, custom-path DOCX header omission and stalled OCR model-load failure.
+
+This is pre-freeze Windows evidence. It does not qualify a stable release or Linux behavior. Fresh exact-commit source and extracted-package flows are required before publication. [Measurements](performance.md) state their workload and limitations. A refreshed full development audit records eight moderate build-tool findings and zero high/critical findings; the moderate advisory remains open.
+
+The failure test substitutes a 404 only for the local OCR model through Electron's protocol handler, delegates other asset reads to the shipped server, and restores that handler afterward. The original network allowlist/CSP remain installed; the test does not modify package bytes. Startup and final executable/application-archive hashes match. HTTP routing and `webRequest` did not intercept custom-scheme reads in earlier harness attempts; those failures are retained as harness evidence, not OCR product regressions. Missing-model 404 is also independently exercised through a real Chromium comparison worker.
+
+Two local default Windows package builds failed with `EPERM` at the completed Electron extraction directory's rename. The operating-system cause is unknown. A complete file/hash comparison matched the installed Electron 44.7.0 distribution and its pinned official ZIP checksum. Packaging via the supported `electronDist` option copied that verified runtime and passed the fresh ZIP flow. This bypasses the observed staging rename; it does not establish its cause or repair it. Exact CI still uses the default package command. No ACL, elevated build or sandbox relaxation was used.
+
+## Published preview
+
+The [v0.1.0 preview](https://github.com/Pastalikek65/docdiff-studio/releases/tag/v0.1.0) is public at exact source `48fb1f3367c7f383c16d981d36cb19c5ad1abd84`. [CI 37875725520](https://github.com/Pastalikek65/docdiff-studio/actions/runs/37875725520) passed 29 tests, typecheck/build/full audit, documented source startup and the eight-step source and freshly extracted package flow on Windows Server 2025 and Ubuntu 24.04. The exact Windows CI package additionally passed the same flow on Windows 11. The four release assets' server-reported sizes and SHA-256 values matched their local files; independent final review found the preview eligible for publication. The release's `verification.json` and `SHA256SUMS.txt` bind this evidence to its packages. Archives are unsigned.
+
+The entries below describe earlier integration snapshots. Their pending statements are historical and superseded by the published preview evidence above. Development v1 adds DOCX/OCR/moves/batch, but its package and stable-release qualification are not complete.
+
+## Earlier integration evidence
+
 The PDF MVP is a preview, not a qualified stable v1. Its source fixtures and acceptance harness are checked in so the workflow can be reproduced.
 
 On Windows x64, Node 24 and Electron 44.7.0, the initial integration passed TypeScript checks and 27 tests across seven files. Seven independent browser acceptance cases use the actual PDF.js worker: page insertions/removals, text/visual changes, scan uncertainty, malformed/resource-limited inputs, escaping, source-byte confidentiality and cancellation. The corpus manifest SHA-256 is `d984e03245c401f7a2972f0052c0602c06fcff4a0bd1869fdd9a8e7f9d2b753d`.

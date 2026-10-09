@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "description": "Unmodified upstream notices, build provenance and local English OCR model. Compiled libraries retain separate licenses; the core npm Apache license does not replace them.",
+  "tesseractCoreVersion": "7.0.0",
+  "tesseractCoreCommit": "acffef2b66eb44a31df297e11d905f4b39001068",
+  "files": [
+    {
+      "component": "leptonica",
+      "upstreamCommit": "4af068b56a9674da915debea4ed7e1b9885b17e8",
+      "url": "https://raw.githubusercontent.com/DanBloomberg/leptonica/4af068b56a9674da915debea4ed7e1b9885b17e8/leptonica-license.txt",
+      "path": "third_party/ocr/leptonica/leptonica-license.txt",
+      "bytes": 1521,
+      "sha256": "87829abb5bbb00b55a107365da89e9a33f86c4250169e5a1e5588505be7d5806"
+    },
+    {
+      "component": "libjpeg",
+      "upstreamCommit": "6c0fcb8ddee365e7abc4d332662b06900612e923",
+      "url": "https://raw.githubusercontent.com/LuaDist/libjpeg/6c0fcb8ddee365e7abc4d332662b06900612e923/README",
+      "path": "third_party/ocr/libjpeg/README",
+      "bytes": 19110,
+      "sha256": "c791da525733040e622ed257c7b096b8f5191b332604ead0c6bc2b54cbd8e0d1"
+    },
+    {
+      "component": "giflib",
+      "upstreamCommit": "fa37672085ce4b3d62c51627ab3c8cf2dda8009a",
+      "url": "https://raw.githubusercontent.com/mirrorer/giflib/fa37672085ce4b3d62c51627ab3c8cf2dda8009a/COPYING",
+      "path": "third_party/ocr/giflib/COPYING",
+      "bytes": 1088,
+      "sha256": "0c9b7990ecdca88b676db232c226548ac408b279f550d424d996f0d83591dd8e"
+    },
+    {
+      "component": "libpng",
+      "upstreamCommit": "a37d4836519517bdce6cb9d956092321eca3e73b",
+      "url": "https://raw.githubusercontent.com/glennrp/libpng/a37d4836519517bdce6cb9d956092321eca3e73b/LICENSE",
+      "path": "third_party/ocr/libpng/LICENSE",
+      "bytes": 5345,
+      "sha256": "33ba4e187d8b0c8d7ab2bc2e522bb095219e03089e9aa0122b4fb9eb2b7de82b"
+    },
+    {
+      "component": "libtiff",
+      "upstreamCommit": "b51bb157123264e26d34c09cc673d213aea61fc7",
+      "url": "https://gitlab.com/libtiff/libtiff/-/raw/b51bb157123264e26d34c09cc673d213aea61fc7/COPYRIGHT",
+      "path": "third_party/ocr/libtiff/COPYRIGHT",
+      "bytes": 1146,
+      "sha256": "fbd6fed7938541d2c809c0826225fc85e551fdbfa8732b10f0c87e0847acafd7"
+    },
+    {
+      "component": "libwebp",
+      "upstreamCommit": "20ef03ee351d4ff03fc5ff3ec4804a879d1b9d5c",
+      "url": "https://raw.githubusercontent.com/webmproject/libwebp/20ef03ee351d4ff03fc5ff3ec4804a879d1b9d5c/COPYING",
+      "path": "third_party/ocr/libwebp/COPYING",
+      "bytes": 1496,
+      "sha256": "5aec868f669e384a22372a4e8a1a6cd7d44c64cd451f960ca69cc170d1e13acf"
+    },
+    {
+      "component": "zlib",
+      "upstreamCommit": "21767c654d31d2dccdde4330529775c6c5fd5389",
+      "url": "https://raw.githubusercontent.com/madler/zlib/21767c654d31d2dccdde4330529775c6c5fd5389/README",
+      "path": "third_party/ocr/zlib/README",
+      "bytes": 5368,
+      "sha256": "fc2c3368901700f0acdeb1d8afeaca5923296768ec6824ecdf627aac396001fd"
+    },
+    {
+      "component": "zlib",
+      "upstreamCommit": "21767c654d31d2dccdde4330529775c6c5fd5389",
+      "url": "https://raw.githubusercontent.com/madler/zlib/21767c654d31d2dccdde4330529775c6c5fd5389/zlib.h",
+      "path": "third_party/ocr/zlib/zlib.h",
+      "bytes": 97317,
+      "sha256": "045cf777c6c9109b28ddcf3a413c5ca15e39fc513c13ef87bd9a3132a59d1b51"
+    },
+    {
+      "component": "tesseract",
+      "upstreamCommit": "2a9c1c49c360462733c386d2a44fcd22c4e21411",
+      "url": "https://raw.githubusercontent.com/Balearica/tesseract/2a9c1c49c360462733c386d2a44fcd22c4e21411/LICENSE",
+      "path": "third_party/ocr/tesseract/LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "component": "openlibm",
+      "upstreamCommit": "ae2d91698508701c83cab83714d42a1146dccf85",
+      "url": "https://raw.githubusercontent.com/JuliaMath/openlibm/ae2d91698508701c83cab83714d42a1146dccf85/LICENSE.md",
+      "path": "third_party/ocr/openlibm/LICENSE.md",
+      "bytes": 5857,
+      "sha256": "b1843fbf5b03f519a5f0a44fce751bdd1022ae7148614923f9d6293e17a18b17"
+    },
+    {
+      "component": "tesseract-core",
+      "upstreamCommit": "acffef2b66eb44a31df297e11d905f4b39001068",
+      "url": "https://raw.githubusercontent.com/naptha/tesseract.js-core/acffef2b66eb44a31df297e11d905f4b39001068/LICENSE",
+      "path": "third_party/ocr/tesseract-core/LICENSE",
+      "bytes": 11358,
+      "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+    },
+    {
+      "component": "tesseract-core",
+      "upstreamCommit": "acffef2b66eb44a31df297e11d905f4b39001068",
+      "url": "https://raw.githubusercontent.com/naptha/tesseract.js-core/acffef2b66eb44a31df297e11d905f4b39001068/README.md",
+      "path": "third_party/ocr/tesseract-core/README.md",
+      "bytes": 4562,
+      "sha256": "8b24e92f90bac34a54935305b1d99d5b007898d29b03992f605453232468c6fa"
+    },
+    {
+      "component": "tesseract-core",
+      "upstreamCommit": "acffef2b66eb44a31df297e11d905f4b39001068",
+      "url": "https://raw.githubusercontent.com/naptha/tesseract.js-core/acffef2b66eb44a31df297e11d905f4b39001068/build-scripts/var.sh",
+      "path": "third_party/ocr/tesseract-core/build-scripts/var.sh",
+      "bytes": 2054,
+      "sha256": "afa32cc3ea8effe04bcc3f7aad0f4315f20f6145f70f98f8515283315223da31"
+    },
+    {
+      "component": "tesseract-core",
+      "upstreamCommit": "acffef2b66eb44a31df297e11d905f4b39001068",
+      "url": "https://raw.githubusercontent.com/naptha/tesseract.js-core/acffef2b66eb44a31df297e11d905f4b39001068/build-scripts/build-openlibm.sh",
+      "path": "third_party/ocr/tesseract-core/build-scripts/build-openlibm.sh",
+      "bytes": 229,
+      "sha256": "81f52aa043000633cf939340f84acd7bc104cd788116b13d4d55ca45e1dcb9b5"
+    },
+    {
+      "component": "tesseract-core",
+      "upstreamCommit": "acffef2b66eb44a31df297e11d905f4b39001068",
+      "url": "https://raw.githubusercontent.com/naptha/tesseract.js-core/acffef2b66eb44a31df297e11d905f4b39001068/build-scripts/build-tesseract.sh",
+      "path": "third_party/ocr/tesseract-core/build-scripts/build-tesseract.sh",
+      "bytes": 1707,
+      "sha256": "73e9f3c6ac911e2e43a0fb2732f7fa44429e1b0f3185b0d4b8dc5bdb5d79f5d4"
+    },
+    {
+      "component": "tessdata-fast-eng",
+      "upstreamCommit": "87416418657359cb625c412a48b6e1d6d41c29bd",
+      "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/87416418657359cb625c412a48b6e1d6d41c29bd/LICENSE",
+      "path": "third_party/ocr/tessdata-fast/LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "component": "tessdata-fast-eng",
+      "upstreamCommit": "87416418657359cb625c412a48b6e1d6d41c29bd",
+      "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/87416418657359cb625c412a48b6e1d6d41c29bd/eng.traineddata",
+      "path": "third_party/ocr/tessdata-fast/eng.traineddata",
+      "bytes": 4113088,
+      "sha256": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2"
+    },
+    {
+      "component": "emscripten-toolchain-runtime",
+      "upstreamVersion": "4.0.15",
+      "url": "https://raw.githubusercontent.com/emscripten-core/emscripten/4.0.15/LICENSE",
+      "path": "third_party/ocr/emscripten/LICENSE",
+      "bytes": 5093,
+      "sha256": "620a78084fc7ca97c0b5dea9abf891f3ffcadfdbf305276f099c9c4e12fc1d86"
+    },
+    {
+      "component": "emscripten-toolchain-runtime",
+      "upstreamVersion": "4.0.15",
+      "url": "https://raw.githubusercontent.com/emscripten-core/emscripten/4.0.15/system/lib/libc/musl/COPYRIGHT",
+      "path": "third_party/ocr/emscripten/system/lib/libc/musl/COPYRIGHT",
+      "bytes": 6204,
+      "sha256": "f9bc4423732350eb0b3f7ed7e91d530298476f8fec0c6c427a1c04ade22655af"
+    },
+    {
+      "component": "emscripten-toolchain-runtime",
+      "upstreamVersion": "4.0.15",
+      "url": "https://raw.githubusercontent.com/emscripten-core/emscripten/4.0.15/system/lib/libcxx/LICENSE.TXT",
+      "path": "third_party/ocr/emscripten/system/lib/libcxx/LICENSE.TXT",
+      "bytes": 16703,
+      "sha256": "539dd7aed86e8a4f12cbdd0e6c50c189c7d74847e4fecc64ce2c6ee3a01da38b"
+    },
+    {
+      "component": "emscripten-toolchain-runtime",
+      "upstreamVersion": "4.0.15",
+      "url": "https://raw.githubusercontent.com/emscripten-core/emscripten/4.0.15/system/lib/libcxxabi/LICENSE.TXT",
+      "path": "third_party/ocr/emscripten/system/lib/libcxxabi/LICENSE.TXT",
+      "bytes": 16706,
+      "sha256": "e2b35be49f7284a45b7baca8fc7b3ab7440e7902392b2528a457816b5bb2a15c"
+    },
+    {
+      "component": "emscripten-toolchain-runtime",
+      "upstreamVersion": "4.0.15",
+      "url": "https://raw.githubusercontent.com/emscripten-core/emscripten/4.0.15/system/lib/libunwind/LICENSE.TXT",
+      "path": "third_party/ocr/emscripten/system/lib/libunwind/LICENSE.TXT",
+      "bytes": 16706,
+      "sha256": "b5efebcaca80879234098e52d1725e6d9eb8fb96a19fce625d39184b705f7b6d"
+    },
+    {
+      "component": "tesseract-core",
+      "upstreamCommit": "acffef2b66eb44a31df297e11d905f4b39001068",
+      "url": "https://raw.githubusercontent.com/naptha/tesseract.js-core/acffef2b66eb44a31df297e11d905f4b39001068/build-with-docker.sh",
+      "path": "third_party/ocr/tesseract-core/build-with-docker.sh",
+      "bytes": 239,
+      "sha256": "639c2bdec2d29ed50a52ac16f7ceb8bd0f425a5c976bd3a06c1abd01e68fe5de"
+    }
+  ],
+  "emscriptenVersion": "4.0.15",
+  "toolchainEvidence": "Pinned upstream build-with-docker.sh declares EM_VERSION=4.0.15; upstream build-openlibm.sh targets install-static, not tests. Build scripts preserved as provenance, not executed."
+}

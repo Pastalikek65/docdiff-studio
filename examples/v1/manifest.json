@@ -1,0 +1,891 @@
+{
+  "schemaVersion": 1,
+  "suite": "DocDiff Studio v1 synthetic DOCX and offline OCR corpus",
+  "corpusVersion": "1.0.0",
+  "generator": "examples/v1/generate.mjs",
+  "license": "Apache-2.0 (same as repository LICENSE)",
+  "externalFixtureSources": [],
+  "confidentiality": "All text and scans are synthetic. Scan-only PDF pages contain a grayscale PNG image and no selectable or hidden text layer.",
+  "limitsCovered": {
+    "docxInputBytes": 52428800,
+    "zipEntries": 4096,
+    "totalInflatedBytes": 104857600,
+    "xmlPartBytes": 16777216,
+    "xmlDepth": 128,
+    "ocrPagesPerComparison": 20,
+    "ocrPixelsPerPage": 1920000,
+    "ocrPixelsTotal": 20000000
+  },
+  "cases": [
+    {
+      "id": "docx-paragraph-and-cell-change",
+      "format": "docx",
+      "before": "docx-change-before.docx",
+      "after": "docx-change-after.docx",
+      "expectation": {
+        "outcome": "changed",
+        "requiresCellChanges": true,
+        "requiresDocxEvidence": true
+      }
+    },
+    {
+      "id": "docx-insert-middle",
+      "format": "docx",
+      "before": "docx-insert-before.docx",
+      "after": "docx-insert-after.docx",
+      "expectation": {
+        "outcome": "changed",
+        "requiresAddedParagraph": true,
+        "laterParagraphsRemainAligned": true
+      }
+    },
+    {
+      "id": "docx-remove-middle",
+      "format": "docx",
+      "before": "docx-remove-before.docx",
+      "after": "docx-remove-after.docx",
+      "expectation": {
+        "outcome": "changed",
+        "requiresRemovedParagraph": true
+      }
+    },
+    {
+      "id": "docx-unique-move",
+      "format": "docx",
+      "before": "docx-move-before.docx",
+      "after": "docx-move-after.docx",
+      "expectation": {
+        "outcome": "changed",
+        "movedRows": 1,
+        "stableMoveId": true
+      }
+    },
+    {
+      "id": "docx-duplicate-ambiguity",
+      "format": "docx",
+      "before": "docx-duplicate-before.docx",
+      "after": "docx-duplicate-after.docx",
+      "expectation": {
+        "outcome": "changed",
+        "movedRows": 0,
+        "duplicateBoilerplateNotCalledMoved": true
+      }
+    },
+    {
+      "id": "docx-split-runs-equal-text",
+      "format": "docx",
+      "before": "docx-split-runs-before.docx",
+      "after": "docx-split-runs-after.docx",
+      "expectation": {
+        "outcome": "identical",
+        "sameLogicalParagraph": true
+      }
+    },
+    {
+      "id": "docx-tabs-preserved",
+      "format": "docx",
+      "before": "docx-tabs-before.docx",
+      "after": "docx-tabs-after.docx",
+      "expectation": {
+        "outcome": "identical",
+        "extractedTextContainsTab": true
+      }
+    },
+    {
+      "id": "docx-unsupported-header-not-identical",
+      "format": "docx",
+      "before": "docx-header-before.docx",
+      "after": "docx-header-after.docx",
+      "expectation": {
+        "notIdentical": true,
+        "acceptable": [
+          "error",
+          "uncertain",
+          "changed"
+        ],
+        "code": "DOCX_UNSUPPORTED_FEATURE"
+      }
+    },
+    {
+      "id": "docx-tracked-revisions-not-identical",
+      "format": "docx",
+      "before": "docx-revisions-base.docx",
+      "after": "docx-revisions-marked.docx",
+      "expectation": {
+        "notIdentical": true,
+        "acceptable": [
+          "error",
+          "uncertain",
+          "changed"
+        ],
+        "code": "DOCX_UNSUPPORTED_FEATURE"
+      }
+    },
+    {
+      "id": "docx-unknown-text-bearing-element-not-identical",
+      "format": "docx",
+      "before": "docx-unknown-text-before.docx",
+      "after": "docx-unknown-text-after.docx",
+      "expectation": {
+        "notIdentical": true,
+        "acceptable": [
+          "error",
+          "uncertain",
+          "changed"
+        ]
+      }
+    },
+    {
+      "id": "docx-alternate-transitional-namespace-not-identical",
+      "format": "docx",
+      "before": "docx-namespace-before.docx",
+      "after": "docx-namespace-after.docx",
+      "expectation": {
+        "notIdentical": true,
+        "acceptable": [
+          "error",
+          "changed"
+        ],
+        "code": "DOCX_UNSUPPORTED_FEATURE"
+      }
+    },
+    {
+      "id": "docx-report-text-escaping",
+      "format": "docx",
+      "before": "docx-report-text.docx",
+      "after": "docx-report-text.docx",
+      "expectation": {
+        "outcome": "identical",
+        "sourceTextEscaped": true,
+        "noActiveHtml": true
+      }
+    },
+    {
+      "id": "docx-medium-benchmark",
+      "format": "docx",
+      "before": "docx-benchmark-before.docx",
+      "after": "docx-benchmark-after.docx",
+      "expectation": {
+        "outcome": "changed",
+        "unitCount": 1500,
+        "paragraphCount": 1000,
+        "tableRowCount": 500,
+        "changedParagraphs": 1,
+        "changedTableRows": 1
+      }
+    },
+    {
+      "id": "hostile-docx-traversal",
+      "format": "docx",
+      "before": "docx-hostile-traversal.docx",
+      "after": "docx-change-before.docx",
+      "expectation": {
+        "error": true,
+        "acceptableCodes": [
+          "DOCX_PACKAGE_INVALID",
+          "DOCX_XML_INVALID",
+          "DOCX_UNSUPPORTED_FEATURE",
+          "INPUT_TOO_LARGE"
+        ]
+      }
+    },
+    {
+      "id": "hostile-docx-absolute-path",
+      "format": "docx",
+      "before": "docx-hostile-absolute-path.docx",
+      "after": "docx-change-before.docx",
+      "expectation": {
+        "error": true,
+        "acceptableCodes": [
+          "DOCX_PACKAGE_INVALID",
+          "DOCX_XML_INVALID",
+          "DOCX_UNSUPPORTED_FEATURE",
+          "INPUT_TOO_LARGE"
+        ]
+      }
+    },
+    {
+      "id": "hostile-docx-backslash-path",
+      "format": "docx",
+      "before": "docx-hostile-backslash-path.docx",
+      "after": "docx-change-before.docx",
+      "expectation": {
+        "error": true,
+        "acceptableCodes": [
+          "DOCX_PACKAGE_INVALID",
+          "DOCX_XML_INVALID",
+          "DOCX_UNSUPPORTED_FEATURE",
+          "INPUT_TOO_LARGE"
+        ]
+      }
+    },
+    {
+      "id": "hostile-docx-encoded-path",
+      "format": "docx",
+      "before": "docx-hostile-encoded-path.docx",
+      "after": "docx-change-before.docx",
+      "expectation": {
+        "error": true,
+        "acceptableCodes": [
+          "DOCX_PACKAGE_INVALID",
+          "DOCX_XML_INVALID",
+          "DOCX_UNSUPPORTED_FEATURE",
+          "INPUT_TOO_LARGE"
+        ]
+      }
+    },
+    {
+      "id": "hostile-docx-crc",
+      "format": "docx",
+      "before": "docx-hostile-crc.docx",
+      "after": "docx-change-before.docx",
+      "expectation": {
+        "error": true,
+        "acceptableCodes": [
+          "DOCX_PACKAGE_INVALID",
+          "DOCX_XML_INVALID",
+          "DOCX_UNSUPPORTED_FEATURE",
+          "INPUT_TOO_LARGE"
+        ]
+      }
+    },
+    {
+      "id": "hostile-docx-xml-size",
+      "format": "docx",
+      "before": "docx-hostile-xml-size.docx",
+      "after": "docx-change-before.docx",
+      "expectation": {
+        "error": true,
+        "acceptableCodes": [
+          "DOCX_PACKAGE_INVALID",
+          "DOCX_XML_INVALID",
+          "DOCX_UNSUPPORTED_FEATURE",
+          "INPUT_TOO_LARGE"
+        ]
+      }
+    },
+    {
+      "id": "hostile-docx-size-mismatch",
+      "format": "docx",
+      "before": "docx-hostile-size-mismatch.docx",
+      "after": "docx-change-before.docx",
+      "expectation": {
+        "error": true,
+        "acceptableCodes": [
+          "DOCX_PACKAGE_INVALID",
+          "DOCX_XML_INVALID",
+          "DOCX_UNSUPPORTED_FEATURE",
+          "INPUT_TOO_LARGE"
+        ]
+      }
+    },
+    {
+      "id": "hostile-docx-aggregate-size",
+      "format": "docx",
+      "before": "docx-hostile-aggregate-size.docx",
+      "after": "docx-change-before.docx",
+      "expectation": {
+        "error": true,
+        "acceptableCodes": [
+          "DOCX_PACKAGE_INVALID",
+          "DOCX_XML_INVALID",
+          "DOCX_UNSUPPORTED_FEATURE",
+          "INPUT_TOO_LARGE"
+        ]
+      }
+    },
+    {
+      "id": "hostile-docx-dtd",
+      "format": "docx",
+      "before": "docx-hostile-dtd.docx",
+      "after": "docx-change-before.docx",
+      "expectation": {
+        "error": true,
+        "acceptableCodes": [
+          "DOCX_PACKAGE_INVALID",
+          "DOCX_XML_INVALID",
+          "DOCX_UNSUPPORTED_FEATURE",
+          "INPUT_TOO_LARGE"
+        ]
+      }
+    },
+    {
+      "id": "hostile-docx-depth",
+      "format": "docx",
+      "before": "docx-hostile-depth.docx",
+      "after": "docx-change-before.docx",
+      "expectation": {
+        "error": true,
+        "acceptableCodes": [
+          "DOCX_PACKAGE_INVALID",
+          "DOCX_XML_INVALID",
+          "DOCX_UNSUPPORTED_FEATURE",
+          "INPUT_TOO_LARGE"
+        ]
+      }
+    },
+    {
+      "id": "hostile-docx-entry-count",
+      "format": "docx",
+      "before": "docx-hostile-entry-count.docx",
+      "after": "docx-change-before.docx",
+      "expectation": {
+        "error": true,
+        "acceptableCodes": [
+          "DOCX_PACKAGE_INVALID",
+          "DOCX_XML_INVALID",
+          "DOCX_UNSUPPORTED_FEATURE",
+          "INPUT_TOO_LARGE"
+        ]
+      }
+    },
+    {
+      "id": "ocr-identical-scan-remains-uncertain",
+      "format": "pdf",
+      "before": "ocr-identical-before.pdf",
+      "after": "ocr-identical-after.pdf",
+      "options": {
+        "ocr": {
+          "enabled": true,
+          "beforePageIndexes": [
+            0
+          ],
+          "afterPageIndexes": [
+            0
+          ],
+          "minimumConfidence": 0
+        }
+      },
+      "expectation": {
+        "outcome": "uncertain",
+        "noFalseIdentical": true,
+        "textEvidenceSource": "ocr"
+      }
+    },
+    {
+      "id": "ocr-word-difference",
+      "format": "pdf",
+      "before": "ocr-word-before.pdf",
+      "after": "ocr-word-after.pdf",
+      "options": {
+        "ocr": {
+          "enabled": true,
+          "beforePageIndexes": [
+            0
+          ],
+          "afterPageIndexes": [
+            0
+          ],
+          "minimumConfidence": 0
+        }
+      },
+      "expectation": {
+        "outcome": "changed",
+        "expectedBeforeText": "INVOICE REVIEW",
+        "expectedAfterText": "INVOICE REVISED",
+        "textEvidenceSource": "ocr"
+      }
+    },
+    {
+      "id": "ocr-number-difference",
+      "format": "pdf",
+      "before": "ocr-word-before.pdf",
+      "after": "ocr-number-after.pdf",
+      "options": {
+        "ocr": {
+          "enabled": true,
+          "beforePageIndexes": [
+            0
+          ],
+          "afterPageIndexes": [
+            0
+          ],
+          "minimumConfidence": 0
+        }
+      },
+      "expectation": {
+        "outcome": "changed",
+        "expectedBeforeText": "1250",
+        "expectedAfterText": "1350",
+        "textEvidenceSource": "ocr"
+      }
+    },
+    {
+      "id": "ocr-mixed-selected-only",
+      "format": "pdf",
+      "before": "ocr-mixed-before.pdf",
+      "after": "ocr-mixed-after.pdf",
+      "options": {
+        "ocr": {
+          "enabled": true,
+          "beforePageIndexes": [
+            1
+          ],
+          "afterPageIndexes": [
+            1
+          ],
+          "minimumConfidence": 0
+        }
+      },
+      "expectation": {
+        "outcome": "changed",
+        "selectedPageEvidence": "ocr",
+        "unselectedPageEvidence": "pdf-text",
+        "pageIndexes": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "pdf-unique-page-move",
+      "format": "pdf",
+      "before": "pdf-move-before.pdf",
+      "after": "pdf-move-after.pdf",
+      "expectation": {
+        "outcome": "changed",
+        "movedRows": 1,
+        "beforePageIndex": 1,
+        "afterPageIndex": 3,
+        "stableMoveId": true
+      }
+    },
+    {
+      "id": "pdf-moved-page-visual-change",
+      "format": "pdf",
+      "before": "pdf-move-before.pdf",
+      "after": "pdf-move-visual-after.pdf",
+      "expectation": {
+        "outcome": "changed",
+        "movedRows": 1,
+        "changedRows": 0,
+        "beforePageIndex": 1,
+        "afterPageIndex": 3,
+        "visualChangedPixels": "greater-than-zero"
+      }
+    },
+    {
+      "id": "pdf-duplicate-page-move-ambiguous",
+      "format": "pdf",
+      "before": "pdf-duplicate-move-before.pdf",
+      "after": "pdf-duplicate-move-after.pdf",
+      "expectation": {
+        "movedRows": 1,
+        "movedUniqueAnchor": "PDF DUPLICATE ENDING",
+        "duplicatePageOccurrencesPerSide": 2,
+        "duplicateBoilerplateNotCalledMoved": true
+      }
+    },
+    {
+      "id": "ocr-cancellation-workload",
+      "format": "pdf",
+      "before": "ocr-cancel-before.pdf",
+      "after": "ocr-cancel-after.pdf",
+      "options": {
+        "ocr": {
+          "enabled": true,
+          "beforePageIndexes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "afterPageIndexes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "minimumConfidence": 0
+        }
+      },
+      "expectation": {
+        "cancellable": true,
+        "afterCancelNoResult": true,
+        "pagesPerSide": 8,
+        "pagesSelectedTotal": 16
+      }
+    }
+  ],
+  "files": [
+    {
+      "name": "docx-benchmark-after.docx",
+      "bytes": 11204,
+      "sha256": "4e5205355a23a252b1a02e452abc946dfc372e5a5a6454b0cab41d15328358fd",
+      "category": "DOCX-benchmark",
+      "note": "Same 1,500 logical units with one paragraph number and one table amount changed."
+    },
+    {
+      "name": "docx-benchmark-before.docx",
+      "bytes": 11206,
+      "sha256": "f5b1bf5026b1f0871d240d98629663f2307d2eeb88a036982e03c8ed0c37a33a",
+      "category": "DOCX-benchmark",
+      "note": "Deterministic medium synthetic workload: 1,000 paragraphs and 500 simple table rows."
+    },
+    {
+      "name": "docx-change-after.docx",
+      "bytes": 1374,
+      "sha256": "65e0b46dcb59a6bf951d74d9a55d68737c691bc056cd383bc244697f1b12e8da",
+      "category": "DOCX",
+      "note": "Selectable OOXML paragraphs and table cells; one paragraph number and one cell value change."
+    },
+    {
+      "name": "docx-change-before.docx",
+      "bytes": 1373,
+      "sha256": "7710d32fc8c86ee8c0814c98959c8952d627262723f178cacb84cbcb5af146b6",
+      "category": "DOCX",
+      "note": "Selectable OOXML paragraphs and table cells; baseline word/number values."
+    },
+    {
+      "name": "docx-duplicate-after.docx",
+      "bytes": 1257,
+      "sha256": "4c90d8ca131bdef4542d3a053898b16f8f8fa0b52fbba886e8be8249b902f61f",
+      "category": "DOCX",
+      "note": "Repeated boilerplate reordered; neither duplicate may be confidently marked moved."
+    },
+    {
+      "name": "docx-duplicate-before.docx",
+      "bytes": 1256,
+      "sha256": "64e955864e8d9a4979fdb276eb838e4676fb65c003ddc4355f80e667e6c433e8",
+      "category": "DOCX",
+      "note": "Repeated boilerplate is deliberately ambiguous as a move candidate."
+    },
+    {
+      "name": "docx-header-after.docx",
+      "bytes": 1606,
+      "sha256": "efa9951ccababcb5939dd057e2a0d22e8477a12f39847f17f87505fd8d09a410",
+      "category": "DOCX",
+      "note": "Body identical to paired file; unsupported header text differs."
+    },
+    {
+      "name": "docx-header-before.docx",
+      "bytes": 1606,
+      "sha256": "dac86df4bcab12855dd985849610a8cc8bdff744509131a6b4cf0dfeead56ae0",
+      "category": "DOCX",
+      "note": "Body identical to paired file; unsupported header text differs."
+    },
+    {
+      "name": "docx-hostile-absolute-path.docx",
+      "bytes": 1334,
+      "sha256": "977817f2b55a6eeca6182cb605814f2af7bcff0f62a75940034dca7395c27fa1",
+      "category": "hostile-DOCX",
+      "note": "Valid ZIP structure with an absolute path entry."
+    },
+    {
+      "name": "docx-hostile-aggregate-size.docx",
+      "bytes": 109549,
+      "sha256": "025937b836fba354dc32e440f1681bb9e31d68bbc01c09bf444f8c32740fe396",
+      "category": "hostile-DOCX",
+      "note": "Seven real 15 MiB entries exceed the 100 MiB aggregate inflation cap while compressing to a small ZIP."
+    },
+    {
+      "name": "docx-hostile-backslash-path.docx",
+      "bytes": 1350,
+      "sha256": "14c456a4efd887aa66dc8a5bfc304f724b0c2d2b9a98a0feec2cbfe3afae3c04",
+      "category": "hostile-DOCX",
+      "note": "Valid ZIP structure with a backslash traversal entry."
+    },
+    {
+      "name": "docx-hostile-crc.docx",
+      "bytes": 1234,
+      "sha256": "a817fd5cfdc48fd6325895263f5c34c5766af4f507817ed73ce9a096eb75a239",
+      "category": "hostile-DOCX",
+      "note": "Central and local CRC fields disagree with the actual XML bytes."
+    },
+    {
+      "name": "docx-hostile-depth.docx",
+      "bytes": 1268,
+      "sha256": "84cd95be1621ded9766352038b8e349a35706f15d0cd31e79046241762dbcec8",
+      "category": "hostile-DOCX",
+      "note": "Well-formed nested customXml exceeds the 128-level XML depth cap."
+    },
+    {
+      "name": "docx-hostile-dtd.docx",
+      "bytes": 1282,
+      "sha256": "5282bc2b7fd973e63a651d5bd6dc5a881c7754e24cd8d628970ea9adf278d691",
+      "category": "hostile-DOCX",
+      "note": "XML contains a local-file external entity declaration."
+    },
+    {
+      "name": "docx-hostile-encoded-path.docx",
+      "bytes": 1358,
+      "sha256": "fe9908a7601c3500c5899b7a1b1be37725d804e7d3c649c27d795b2ef8c9b5f5",
+      "category": "hostile-DOCX",
+      "note": "Valid ZIP structure with URI-encoded traversal segments."
+    },
+    {
+      "name": "docx-hostile-entry-count.docx",
+      "bytes": 468636,
+      "sha256": "c61cea7998c285f537a8ea24faadab0ef659ad7460f69b517fd092555d4bcd78",
+      "category": "hostile-DOCX",
+      "note": "Contains more than the 4,096-entry package cap."
+    },
+    {
+      "name": "docx-hostile-size-mismatch.docx",
+      "bytes": 1248,
+      "sha256": "3c12d452b58ad85460c91804a9524907dfdc097f291fdc1671d70293a8bb3bbb",
+      "category": "hostile-DOCX",
+      "note": "Local and central metadata declare an XML size that does not match the compressed entry."
+    },
+    {
+      "name": "docx-hostile-traversal.docx",
+      "bytes": 1340,
+      "sha256": "130f9cb12c20ebeb5f01a2d0e0d3370543499c5a20e82f0a0ef3934492f86514",
+      "category": "hostile-DOCX",
+      "note": "Valid ZIP structure with a ../ path entry."
+    },
+    {
+      "name": "docx-hostile-xml-size.docx",
+      "bytes": 17588,
+      "sha256": "6a97cb62d8cd412edd6e71b7e8ed45ae49071129a0b6116b8cb9abfe17ef9bbd",
+      "category": "hostile-DOCX",
+      "note": "A real well-formed word/document.xml part exceeds the 16 MiB XML-part cap; its highly compressible payload keeps the ZIP small."
+    },
+    {
+      "name": "docx-insert-after.docx",
+      "bytes": 1263,
+      "sha256": "5601d5685a30a1e159727bb20a5b8ed45af3983fd64550de983b7996b3b80197",
+      "category": "DOCX",
+      "note": "One unique middle paragraph inserted without shifting later paragraph identities."
+    },
+    {
+      "name": "docx-insert-before.docx",
+      "bytes": 1243,
+      "sha256": "3979777109737c9e987316c5bfca93e18753e5853f9fe6164b6f83bf5b46321a",
+      "category": "DOCX",
+      "note": "Two stable paragraphs before a middle insertion."
+    },
+    {
+      "name": "docx-move-after.docx",
+      "bytes": 1277,
+      "sha256": "d93d7cd51cfe4fd44f251bd9af24fe375dbd57de85e2e99024b3c682e07bb3b5",
+      "category": "DOCX",
+      "note": "Same unique paragraph moved to the end."
+    },
+    {
+      "name": "docx-move-before.docx",
+      "bytes": 1279,
+      "sha256": "bc625703d967a0589411e9ea80d7b74050c81d4569a5cd9605366b9e975b706a",
+      "category": "DOCX",
+      "note": "Unique full-document paragraph eligible for move detection."
+    },
+    {
+      "name": "docx-namespace-after.docx",
+      "bytes": 1223,
+      "sha256": "c3747f80f8342d2cccba037bebac08cf7596d641ace6a57814a5a222556ba486",
+      "category": "DOCX-namespace",
+      "note": "Semantically equivalent Transitional namespace bound to x prefix with changed paragraph text."
+    },
+    {
+      "name": "docx-namespace-before.docx",
+      "bytes": 1240,
+      "sha256": "f85d805c4a07faa9d182cd8a945bbecfbd3771f28c58bcd43a6f4369df4b078c",
+      "category": "DOCX-namespace",
+      "note": "Transitional WordprocessingML comparison using the conventional w prefix."
+    },
+    {
+      "name": "docx-remove-after.docx",
+      "bytes": 1243,
+      "sha256": "3979777109737c9e987316c5bfca93e18753e5853f9fe6164b6f83bf5b46321a",
+      "category": "DOCX",
+      "note": "Middle paragraph removed."
+    },
+    {
+      "name": "docx-remove-before.docx",
+      "bytes": 1262,
+      "sha256": "99bbe47d9d2d3ed53df4d467cec8503e3c69c0ea4d186b69fd76fdc69b8b74f2",
+      "category": "DOCX",
+      "note": "Contains the paragraph removed in the paired file."
+    },
+    {
+      "name": "docx-report-text.docx",
+      "bytes": 1264,
+      "sha256": "5347b42fbfb6b8c253d9739f7bfbe94cbc393d1da47c3b4f7ac0f1c512b162b4",
+      "category": "DOCX-report-security",
+      "note": "Synthetic hostile-looking paragraph text for standalone HTML report escaping checks."
+    },
+    {
+      "name": "docx-revisions-base.docx",
+      "bytes": 1234,
+      "sha256": "fd8bb0b2a5a6fe973029de91d88430c72927e3c227495d7e938a5c03fef9c34a",
+      "category": "DOCX",
+      "note": "Clean baseline for tracked-revision coverage."
+    },
+    {
+      "name": "docx-revisions-marked.docx",
+      "bytes": 1564,
+      "sha256": "9decad0e21326e21a56f1ce638213b0dde4b23348b825212bf92467d872fdc2f",
+      "category": "DOCX",
+      "note": "Contains tracked insertion markup and trackRevisions setting."
+    },
+    {
+      "name": "docx-split-runs-after.docx",
+      "bytes": 1244,
+      "sha256": "7f61e67ee52e9d797b16aeb66abe6b2cb09f07d973b56bf93a8665d96a55019c",
+      "category": "DOCX",
+      "note": "Same logical paragraph split across two XML runs."
+    },
+    {
+      "name": "docx-split-runs-before.docx",
+      "bytes": 1238,
+      "sha256": "4f3f5ecf61cc4304bd91904585b2dbcb4ad3a0e8943aa7488bb2b6cfcb58abb3",
+      "category": "DOCX",
+      "note": "One logical paragraph stored in a single run."
+    },
+    {
+      "name": "docx-tabs-after.docx",
+      "bytes": 1252,
+      "sha256": "54875a05732cdd673fcbce254ff963d605475a17ab9b2df7269f2e19eb0b5f0a",
+      "category": "DOCX",
+      "note": "Same tab-separated text split into different runs."
+    },
+    {
+      "name": "docx-tabs-before.docx",
+      "bytes": 1252,
+      "sha256": "54875a05732cdd673fcbce254ff963d605475a17ab9b2df7269f2e19eb0b5f0a",
+      "category": "DOCX",
+      "note": "Contains explicit OOXML tab elements between labels."
+    },
+    {
+      "name": "docx-unknown-text-after.docx",
+      "bytes": 1257,
+      "sha256": "8a0ef760267e69d5812dc91402323b52ed2244834da9cb4d949906770546c634",
+      "category": "DOCX-unsupported",
+      "note": "Same visible paragraph but different text in an unknown w:futureText element. A complete identical result would be a false negative."
+    },
+    {
+      "name": "docx-unknown-text-before.docx",
+      "bytes": 1257,
+      "sha256": "c8c040ab1e9d8b9d14ebcc8a4b33d1b357d1d79a0c1278ca33af4fa2d057000a",
+      "category": "DOCX-unsupported",
+      "note": "Contains text in an unknown w:futureText element that is outside the supported extraction model."
+    },
+    {
+      "name": "ocr-cancel-after.pdf",
+      "bytes": 301065,
+      "sha256": "c98fc39d29521dfb2c311ba041b800543e69013e77f816625835c290cb82395c",
+      "category": "scan-PDF",
+      "note": "Same twelve-page workload used to verify cooperative worker cancellation."
+    },
+    {
+      "name": "ocr-cancel-before.pdf",
+      "bytes": 301065,
+      "sha256": "c98fc39d29521dfb2c311ba041b800543e69013e77f816625835c290cb82395c",
+      "category": "scan-PDF",
+      "note": "Twelve-page representative raster OCR workload; about 4.3 million output pixels per side at 1200x300/page."
+    },
+    {
+      "name": "ocr-identical-after.pdf",
+      "bytes": 25753,
+      "sha256": "f3219c23d7788d308bdc58696108f399f746a50631206ce283a2d5b0fc9b6f68",
+      "category": "scan-PDF",
+      "note": "Byte-identical scanned page; OCR evidence must still keep outcome uncertain."
+    },
+    {
+      "name": "ocr-identical-before.pdf",
+      "bytes": 25753,
+      "sha256": "f3219c23d7788d308bdc58696108f399f746a50631206ce283a2d5b0fc9b6f68",
+      "category": "scan-PDF",
+      "note": "Raster-only bitmap page; no selectable text or invisible OCR text."
+    },
+    {
+      "name": "ocr-mixed-after.pdf",
+      "bytes": 26857,
+      "sha256": "1b181c9d2cca2f673167bd7ff19078f53ddb5e779123012cecf986a1a7055da2",
+      "category": "mixed-PDF",
+      "note": "Selectable cover is unchanged; selected scanned page has a word change."
+    },
+    {
+      "name": "ocr-mixed-before.pdf",
+      "bytes": 26242,
+      "sha256": "333e133a7276da271bfd9b1d4c081e3f3e317ee6071e6bb41133dfc6c7b436e9",
+      "category": "mixed-PDF",
+      "note": "Selectable cover page plus a separate raster-only scan page."
+    },
+    {
+      "name": "ocr-number-after.pdf",
+      "bytes": 25910,
+      "sha256": "742ca204bc7c0e7fa2f8df32c199dee6ded0b968b0459f50dfeead2e09b03b69",
+      "category": "scan-PDF",
+      "note": "Raster-only synthetic English text; total changes from 1250 to 1350."
+    },
+    {
+      "name": "ocr-reference-number-changed.png",
+      "bytes": 63210,
+      "sha256": "4ce1604b8366b67f308b0a097acdc246ede73fcddcfa44c9995a8e44f17c576d",
+      "category": "raster-reference",
+      "note": "Number-change raster counterpart embedded in the scan-only PDFs."
+    },
+    {
+      "name": "ocr-reference-word-changed.png",
+      "bytes": 62390,
+      "sha256": "45d3770c519c521ce6cc4d9be972ca761be0ff395a4d86f935467fc61dd12ca2",
+      "category": "raster-reference",
+      "note": "Word-change raster counterpart embedded in the scan-only PDFs."
+    },
+    {
+      "name": "ocr-reference.png",
+      "bytes": 62729,
+      "sha256": "a71dcabe6da755ef15a76cf28bcd5bb8eb1c9d8c5fd5f9ec89160558e0b28dc6",
+      "category": "raster-reference",
+      "note": "Exact grayscale bitmap embedded in the scan-only PDFs; rendered from the repository Liberation Sans font."
+    },
+    {
+      "name": "ocr-word-after.pdf",
+      "bytes": 26356,
+      "sha256": "4c7c7b756d48be7f1ee3a3b2da409b76db2e19f6ff21183d205046cab6453be5",
+      "category": "scan-PDF",
+      "note": "Raster-only synthetic English text; REVIEW changes to REVISED."
+    },
+    {
+      "name": "ocr-word-before.pdf",
+      "bytes": 25741,
+      "sha256": "f7f42c18bf70c88564aa43a22af8c84684ce1b57d40035548903630bfadda92e",
+      "category": "scan-PDF",
+      "note": "Raster-only synthetic English text, INVOICE REVIEW / TOTAL DUE 1250."
+    },
+    {
+      "name": "pdf-duplicate-move-after.pdf",
+      "bytes": 2643,
+      "sha256": "f9fbf36bc6333f4007e7344b754c813d6028a866de0effacc6880f7cea77d0de",
+      "category": "move-PDF",
+      "note": "Repeated searchable boilerplate is reordered around a stable ending page and must remain ambiguous."
+    },
+    {
+      "name": "pdf-duplicate-move-before.pdf",
+      "bytes": 2644,
+      "sha256": "be2690a660c3dd5b90d002a186d0ee7dc0aafe266ebdfc310df9d5498ce0e7cb",
+      "category": "move-PDF",
+      "note": "Repeated searchable boilerplate pages have identical global fingerprints."
+    },
+    {
+      "name": "pdf-move-after.pdf",
+      "bytes": 2643,
+      "sha256": "e3bf898dffb27ea58ff69499ddd882d76955f7f0939959b9ec3e6f0e30fe9201",
+      "category": "move-PDF",
+      "note": "The same unique searchable page reordered to the end."
+    },
+    {
+      "name": "pdf-move-before.pdf",
+      "bytes": 2646,
+      "sha256": "ca1f7e851149262fa949fdadd157d3baf284215f946d6196517043cdfb81bc21",
+      "category": "move-PDF",
+      "note": "Unique searchable page before global reorder."
+    },
+    {
+      "name": "pdf-move-visual-after.pdf",
+      "bytes": 2737,
+      "sha256": "f13daedccb526d0e4734939f7a06342ec984350e3ca07c998ccd9f4b4ea97a82",
+      "category": "move-PDF",
+      "note": "Same page order as the moved-page pair with one red rectangle on the moved REF-742 page."
+    }
+  ]
+}

@@ -1,4 +1,10 @@
 * text=auto eol=lf
+*.traineddata binary
+*.wasm binary
+*.docx binary
 *.pdf binary
 *.png binary
 *.tar.gz binary
+third_party/npm/** -text
+third_party/ocr/** -text
+third_party/ocr/*.json text eol=lf

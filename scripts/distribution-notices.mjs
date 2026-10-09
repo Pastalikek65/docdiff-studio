@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const lock = JSON.parse(await readFile(path.join(root, 'package-lock.json'), 'utf8'));
 const inventory = [];
-const bundledNames = new Set(['diff', 'pdfjs-dist', 'react', 'react-dom', 'scheduler', 'fflate', 'fast-xml-parser', 'fast-xml-builder', '@nodable/entities', 'anynum', 'is-unsafe', 'path-expression-matcher', 'strnum', 'xml-naming']);
+const bundledNames = new Set(['diff', 'pdfjs-dist', 'react', 'react-dom', 'scheduler', 'fflate', 'fast-xml-parser', 'fast-xml-builder', '@nodable/entities', 'anynum', 'is-unsafe', 'path-expression-matcher', 'strnum', 'xml-naming', 'tesseract.js', 'tesseract.js-core', 'bmp-js', 'idb-keyval', 'is-url', 'regenerator-runtime', 'wasm-feature-detect', 'zlibjs']);
 for (const [relative, entry] of Object.entries(lock.packages)) {
   if (!relative) continue;
   const folder = path.join(root, relative);

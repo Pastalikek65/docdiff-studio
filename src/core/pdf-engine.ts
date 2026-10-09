@@ -72,6 +72,7 @@ export async function comparePdfDocuments(
   after: import('./types').DocumentInput,
   rawOptions: Partial<CompareOptions> = {},
   onProgress?: (progress: CompareProgress) => void,
+  onRenderPixelUsage?: (pixels: number) => void,
 ): Promise<ComparisonResult> {
   const startedAt = performance.now();
   const options = validateOptions(rawOptions);
@@ -245,6 +246,7 @@ export async function comparePdfDocuments(
       checkTime(startedAt);
       reportProgress(onProgress, { phase: 'Comparison complete', completed: 1, total: 1 });
     });
+    try { onRenderPixelUsage?.(budget.inputPixels); } catch { /* Internal telemetry cannot break a comparison. */ }
     return result;
   } finally {
     await Promise.allSettled(opened.map(({ loadingTask }) => loadingTask.destroy()));

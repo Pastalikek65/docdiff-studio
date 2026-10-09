@@ -33,7 +33,7 @@ try {
   browser = await chromium.connectOverCDP(endpoint, { timeout: 15000 });
   const context = browser.contexts()[0];
   const page = context.pages()[0] ?? await context.waitForEvent('page', { timeout: 15000 });
-  await page.getByRole('button', { name: 'Compare PDFs' }).waitFor({ timeout: 15000 });
+  await page.getByRole('button', { name: /Compare (PDFs|pair)/ }).waitFor({ timeout: 15000 });
   assert.equal(page.url(), 'docdiff://app/index.html');
   assert.equal(await page.evaluate(() => typeof window.require), 'undefined');
   const url = page.url();

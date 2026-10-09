@@ -61,7 +61,7 @@ function getMimeType(filePath: string): string {
   }
 }
 
-async function serveAppAsset(rawUrl: string, method: string): Promise<Response> {
+export async function serveAppAsset(rawUrl: string, method: string): Promise<Response> {
   if (method !== 'GET' && method !== 'HEAD') return new Response('Method not allowed', { status: 405 });
   let pathname: string;
   try {

@@ -1,6 +1,6 @@
 # Support contract
 
-The current candidate is a PDF MVP under active qualification. No stable release or successful package/platform qualification is claimed yet.
+The published v0.1.0 PDF preview is qualified on Windows Server 2025 and Ubuntu 24.04, with an additional exact-package Windows 11 run. Its release binds evidence to source `48fb1f3367c7f383c16d981d36cb19c5ad1abd84`. Development source is adding v1 features; it has not passed the stable-release gate. Use the tagged preview for its tested scope.
 
 The engine reads digital PDFs, extracts a text layer and renders page appearance with bundled PDF.js assets. Encrypted/password-protected or malformed files fail explicitly. External document links, JavaScript, embedded attachments and interactive forms are not executed. Images represent page rendering; text does not preserve every typographic or reading-order detail. Visual equality is bounded by the selected rendering scale and pixel tolerance, not a byte-level or legal equivalence claim.
 
@@ -10,4 +10,14 @@ Limits: 50 MiB per input, 100 MiB combined, 200 pages per document, 100,000 char
 
 Files stay local. The main process offers only a sender-bound, size-limited save dialog operation. No account, cloud processing or paid API is needed. Saved reports deliberately contain document names, SHA-256 fingerprints, text and page images; inspect them before sharing. Source files are not modified by comparison. A save operation can replace a user-selected report path; it requires the chosen output extension.
 
-Windows and Linux x64 are the qualification targets. Linux desktop use needs a graphical session and Electron system libraries; Linux CI uses Xvfb. Portable archives are unsigned unless a later release explicitly says otherwise. A future release's verification record will identify exact packages, source commit, platform evidence, limitations and open findings.
+## v1 candidate scope
+
+Development source additionally compares UTF-8 Transitional OOXML DOCX documents using the conventional `w` WordprocessingML prefix. It reads main-body paragraphs and basic table rows/cells, without reconstructing physical pages or Word layout. Strict OOXML, alternate Word prefixes, malformed or unsupported packages fail explicitly. Formatting, computed fields, complex tables, drawings, headers/footers, comments, revisions and other text-bearing features are outside semantic coverage; detected omitted content makes certainty incomplete. A matching main body with omitted content is uncertain, rather than a complete document equality claim.
+
+DOCX package limits include 4,096 entries, 100 MiB aggregate declared content, 16 MiB per selected XML part, 32 MiB selected XML content, 100,000 logical units, 1,000,000 XML nodes and depth 128. Selected XML inflation is measured and bounded; archive paths, overlaps, encryption, inconsistent local/central metadata and CRC errors are rejected. These checks do not qualify arbitrary hostile PDF decompression or impose an OS memory limit.
+
+Exact move labels require unique extracted text in both entire documents. Repeated text stays ambiguous. A moved PDF page can still have an appearance change; review its visual overlay. OCR is optional, English-only and limited to 20 selected pages across both inputs, 20 million OCR pixels in total and the existing per-page rendering bounds. It runs only on selected pages with empty extracted text. The model is bundled; missing assets fail rather than downloading a replacement. OCR is heuristic, so inspect recognized words/numbers against the image even at high confidence. Matching OCR text stays uncertain.
+
+Batches contain at most 20 pairs, processed sequentially. Aggregate retained/exported report data is bounded at 64 MiB; reaching the limit fails the current pair and leaves later work not run. Batch JSON includes every job state, including an all-failed or cancelled workspace without successful results. See [report formats](report-formats.md), [offline OCR](offline-ocr.md) and [scoped measurements](performance.md). These candidate features require fresh package qualification before a stable release.
+
+Windows and Linux x64 are the qualification targets. Linux desktop use needs a graphical session and Electron system libraries; Linux CI uses Xvfb. Portable archives are unsigned unless a later release explicitly says otherwise. A release's verification record identifies exact packages, source commit, platform evidence, limitations and open findings.

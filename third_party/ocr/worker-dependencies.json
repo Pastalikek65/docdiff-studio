@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "description": "Dependencies embedded by the upstream prebuilt Tesseract worker, separately from this project source lock. Versions from upstream v7.0.0 lock, integrity-checked registry license texts; source map matches recorded individually.",
+  "workerSha256": "576b7df7e3393e137e51849357c9adb53fe7ac1bb69bfa06cf3d61520f182c6d",
+  "dependencies": [
+    {
+      "name": "base64-js",
+      "version": "1.5.1",
+      "upstreamLockCommit": "42eae669e4b3a66429d8516f078912cc747a89df",
+      "registryIntegrity": "sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==",
+      "registryArchiveSha256": "b1b7a945b52685269083425216d6597e33d97bf21699d656e92fdb3eb5210a85",
+      "licenseFiles": [
+        {
+          "path": "third_party/ocr/worker-npm/base64-js/LICENSE",
+          "sha256": "5b37224c080cdcc97c871ada971c224e9926370fe74f11b539aa1cf9f3b1aca1"
+        }
+      ],
+      "sourceMapFiles": [
+        {
+          "source": "webpack://tesseract.js/./node_modules/base64-js/index.js",
+          "sourceMapSha256": "829eadd8a1a441d25be0cb93b00e16a0d0c20fd294db95d8f2ed87e6954b7182",
+          "matchesRegistryFile": true
+        }
+      ]
+    },
+    {
+      "name": "bmp-js",
+      "version": "0.1.0",
+      "upstreamLockCommit": "42eae669e4b3a66429d8516f078912cc747a89df",
+      "registryIntegrity": "sha512-vHdS19CnY3hwiNdkaqk93DvjVLfbEcI8mys4UjuWrlX1haDmroo8o4xCzh4wD6DGV6HxRCyauwhHRqMTfERtjw==",
+      "registryArchiveSha256": "2fcd95c52df269b230ee622cbae00ed1d576b6bbc15af7042ce7ca7600efdd89",
+      "licenseFiles": [
+        {
+          "path": "third_party/ocr/worker-npm/bmp-js/LICENSE",
+          "sha256": "9f165f5bd2b462122cacb8c6dc32028be1abb4d8ad0322e9a332f30b2ebdb833"
+        }
+      ],
+      "sourceMapFiles": [
+        {
+          "source": "webpack://tesseract.js/./node_modules/bmp-js/lib/encoder.js",
+          "sourceMapSha256": "54c54b0043868c436048ee5405d87956370acc0a9356811f50a123812735bef5",
+          "matchesRegistryFile": true
+        },
+        {
+          "source": "webpack://tesseract.js/./node_modules/bmp-js/index.js",
+          "sourceMapSha256": "77ab01e2cb073a3a5d60d3f2ef1ed9ffd67d27985f03e528767dfb80dcf95aa8",
+          "matchesRegistryFile": true
+        },
+        {
+          "source": "webpack://tesseract.js/./node_modules/bmp-js/lib/decoder.js",
+          "sourceMapSha256": "4e941bb5d1b3ce9c67165fc98adc3dfe1850b0dc92b541c4e50862b6015d7ea5",
+          "matchesRegistryFile": true
+        }
+      ]
+    },
+    {
+      "name": "buffer",
+      "version": "6.0.3",
+      "upstreamLockCommit": "42eae669e4b3a66429d8516f078912cc747a89df",
+      "registryIntegrity": "sha512-FTiCpNxtwiZZHEZbcbTIcZjERVICn9yq/pDFkTl95/AxzD1naBctN7YO68riM/gLSDY7sdrMby8hofADYuuqOA==",
+      "registryArchiveSha256": "555b6f49224afcf6b2c5a9aea7cd34a7f443f395b10532bc5580022d57aa51f5",
+      "licenseFiles": [
+        {
+          "path": "third_party/ocr/worker-npm/buffer/LICENSE",
+          "sha256": "06bafa45fdad2579ba0e43b0c9b2c6290287c99c4203c300254a462b38a307f6"
+        }
+      ],
+      "sourceMapFiles": [
+        {
+          "source": "webpack://tesseract.js/./node_modules/buffer/index.js",
+          "sourceMapSha256": "c25853fd31addfce188b01061fe85bfe667d5fb6c7a7bbb1c83d0ddfd8627acc",
+          "matchesRegistryFile": true
+        }
+      ]
+    },
+    {
+      "name": "idb-keyval",
+      "version": "6.2.1",
+      "upstreamLockCommit": "42eae669e4b3a66429d8516f078912cc747a89df",
+      "registryIntegrity": "sha512-8Sb3veuYCyrZL+VBt9LJfZjLUPWVvqn8tG28VqYNFCo43KHcKuq+b4EiXGeuaLAQWL2YmyDgMp2aSpH9JHsEQg==",
+      "registryArchiveSha256": "f429459ea71232e2661f1620268f787e0ae57231f87d4c5d54d855cc6549ce30",
+      "licenseFiles": [
+        {
+          "path": "third_party/ocr/worker-npm/idb-keyval/LICENCE",
+          "sha256": "20c27d6339619eeb3113cb865d4e98a3f559e52964fc75caea9cb5fa72674565"
+        }
+      ],
+      "sourceMapFiles": [
+        {
+          "source": "webpack://tesseract.js/./node_modules/idb-keyval/dist/index.js",
+          "sourceMapSha256": "2efbeddcc87fd352dd161a09a5a1c197c70e12a1ab6ae16b13f2c53cae045abc",
+          "matchesRegistryFile": false
+        }
+      ]
+    },
+    {
+      "name": "ieee754",
+      "version": "1.2.1",
+      "upstreamLockCommit": "42eae669e4b3a66429d8516f078912cc747a89df",
+      "registryIntegrity": "sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==",
+      "registryArchiveSha256": "8ef14b9b397e339db89db97881fb714f49319d8f0eb1275901f45567b28f9dac",
+      "licenseFiles": [
+        {
+          "path": "third_party/ocr/worker-npm/ieee754/LICENSE",
+          "sha256": "18d45466ba3253deae04667e267a91ea8de8548f18c1125264d1c9db28194cc1"
+        }
+      ],
+      "sourceMapFiles": [
+        {
+          "source": "webpack://tesseract.js/./node_modules/ieee754/index.js",
+          "sourceMapSha256": "fe3e2b20c1ebb57c3b390c8f685ad1e04e6f493517fa7e432f4351bb77a1a4d0",
+          "matchesRegistryFile": true
+        }
+      ]
+    },
+    {
+      "name": "is-url",
+      "version": "1.2.4",
+      "upstreamLockCommit": "42eae669e4b3a66429d8516f078912cc747a89df",
+      "registryIntegrity": "sha512-ITvGim8FhRiYe4IQ5uHSkj7pVaPDrCTkNd3yq3cV7iZAcJdHTUMPMEHcqSOy9xZ9qFenQCvi+2wjH9a1nXqHww==",
+      "registryArchiveSha256": "405c35f4f482de299df33c8d0169f454f77e92be69cd8a6521c64977bf2398f9",
+      "licenseFiles": [
+        {
+          "path": "third_party/ocr/worker-npm/is-url/LICENSE-MIT",
+          "sha256": "80957b522b0ea4ce24290953d74d818220c804d1f42cad02b8d7da1c12ce1fc1"
+        }
+      ],
+      "sourceMapFiles": [
+        {
+          "source": "webpack://tesseract.js/./node_modules/is-url/index.js",
+          "sourceMapSha256": "c7cb9f56300321d104c9772c054144d75e3bf280d184d547fab525f9fbf16e5c",
+          "matchesRegistryFile": true
+        }
+      ]
+    },
+    {
+      "name": "regenerator-runtime",
+      "version": "0.13.11",
+      "upstreamLockCommit": "42eae669e4b3a66429d8516f078912cc747a89df",
+      "registryIntegrity": "sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==",
+      "registryArchiveSha256": "96a0a849ceb83d2cd717d775dc60ddb7c2384564f76a75d0d1e6849af04c2b8c",
+      "licenseFiles": [
+        {
+          "path": "third_party/ocr/worker-npm/regenerator-runtime/LICENSE",
+          "sha256": "51887a3d47051ac2fce1210562e5b9fe0830a8a8fabeb272c2d586eeb18a05fd"
+        }
+      ],
+      "sourceMapFiles": [
+        {
+          "source": "webpack://tesseract.js/./node_modules/regenerator-runtime/runtime.js",
+          "sourceMapSha256": "e4fa2bcc7507e23fb226bad104bd3c526149ebc9891afbc4bb3a4a0c88afded3",
+          "matchesRegistryFile": true
+        }
+      ]
+    },
+    {
+      "name": "wasm-feature-detect",
+      "version": "1.8.0",
+      "upstreamLockCommit": "42eae669e4b3a66429d8516f078912cc747a89df",
+      "registryIntegrity": "sha512-zksaLKM2fVlnB5jQQDqKXXwYHLQUVH9es+5TOOHwGOVJOCeRBCiPjwSg+3tN2AdTCzjgli4jijCH290kXb/zWQ==",
+      "registryArchiveSha256": "38f4cfa553680956123a8c0e5a586d54087e932d65a9c649953a0b1b83026bbc",
+      "licenseFiles": [
+        {
+          "path": "third_party/ocr/worker-npm/wasm-feature-detect/LICENSE",
+          "sha256": "bcf29b4fd3ec2cb5f9d40a0866da446f6da62170d2ccedf4aeca9cf9406dd20c"
+        }
+      ],
+      "sourceMapFiles": [
+        {
+          "source": "webpack://tesseract.js/./node_modules/wasm-feature-detect/dist/cjs/index.cjs",
+          "sourceMapSha256": "1393262b2d5327b4ff2ebe1ebc0cc00a82f88bde0521e59b39c626a11c5aae43",
+          "matchesRegistryFile": true
+        }
+      ]
+    },
+    {
+      "name": "zlibjs",
+      "version": "0.3.1",
+      "upstreamLockCommit": "42eae669e4b3a66429d8516f078912cc747a89df",
+      "registryIntegrity": "sha512-+J9RrgTKOmlxFSDHo0pI1xM6BLVUv+o0ZT9ANtCxGkjIVCCUdx9alUF8Gm+dGLKbkkkidWIHFDZHDMpfITt4+w==",
+      "registryArchiveSha256": "f0f47a703ce0ec4f254c1ae5da122cb02cc8048088d8064eb793a1c60d78521b",
+      "licenseFiles": [
+        {
+          "path": "third_party/ocr/worker-npm/zlibjs/LICENSE",
+          "sha256": "131afe3f7bdce1698beb292fb8de1a968de01bce876122a60ef5db230471c866"
+        }
+      ],
+      "sourceMapFiles": [
+        {
+          "source": "webpack://tesseract.js/./node_modules/zlibjs/bin/node-zlib.js",
+          "sourceMapSha256": "29c696dd3a05fe913959064ec64d1e5808340d390f10698632efdca506edf1e9",
+          "matchesRegistryFile": true
+        }
+      ]
+    }
+  ]
+}
