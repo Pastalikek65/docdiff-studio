@@ -1,0 +1,256 @@
+{
+  "version": 1,
+  "generator": "examples/generate.mjs",
+  "pdfLibrary": "pdf-lib 1.17.1",
+  "fixedPdfDates": "2024-01-02T03:04:05.000Z",
+  "files": [
+    {
+      "file": "corpus/identical-before.pdf",
+      "description": "Before side of byte-identical pair.",
+      "sha256": "83c29cfcf62575a99e4234db88cb81f25d6daf5d4022379faf70472fe3f8e88a",
+      "bytes": 1689,
+      "expected": {
+        "outcome": "identical",
+        "rows": [
+          {
+            "status": "unchanged",
+            "beforePage": 0,
+            "afterPage": 0
+          }
+        ]
+      }
+    },
+    {
+      "file": "corpus/identical-after.pdf",
+      "description": "After side of byte-identical pair.",
+      "sha256": "83c29cfcf62575a99e4234db88cb81f25d6daf5d4022379faf70472fe3f8e88a",
+      "bytes": 1689,
+      "expected": {
+        "outcome": "identical",
+        "rows": [
+          {
+            "status": "unchanged",
+            "beforePage": 0,
+            "afterPage": 0
+          }
+        ]
+      }
+    },
+    {
+      "file": "corpus/word-number-before.pdf",
+      "description": "Before side with a status word and number.",
+      "sha256": "dc243554c6fcb1348ac177528c10590569811d43d6ba21de2bbf473019557bce",
+      "bytes": 1677,
+      "expected": {
+        "outcome": "changed",
+        "rows": [
+          {
+            "status": "changed",
+            "beforePage": 0,
+            "afterPage": 0,
+            "hasRemovedText": true
+          }
+        ]
+      }
+    },
+    {
+      "file": "corpus/word-number-after.pdf",
+      "description": "After side with both a changed word and number.",
+      "sha256": "e482f666ebfe90c43a50a0a4ecafd24de57ec53baa7cf65566f29143906141d1",
+      "bytes": 1674,
+      "expected": {
+        "outcome": "changed",
+        "rows": [
+          {
+            "status": "changed",
+            "beforePage": 0,
+            "afterPage": 0,
+            "hasAddedText": true
+          }
+        ]
+      }
+    },
+    {
+      "file": "corpus/insert-middle-before.pdf",
+      "description": "Four stable anchor pages before a middle-page insertion.",
+      "sha256": "21646b324504941b2b74b665d98ea3efe7157f2fd5d9b8e4ddb3e98455d2c15c",
+      "bytes": 2885,
+      "expected": {
+        "outcome": "changed"
+      }
+    },
+    {
+      "file": "corpus/insert-middle-after.pdf",
+      "description": "Same anchors plus one page between B and C; later anchors must remain aligned.",
+      "sha256": "3e8e716ec6aace3c8b2946fe9e52be579db9d530bca6422c977327400b6b9c0d",
+      "bytes": 3318,
+      "expected": {
+        "outcome": "changed",
+        "rows": [
+          {
+            "status": "unchanged",
+            "beforePage": 0,
+            "afterPage": 0
+          },
+          {
+            "status": "unchanged",
+            "beforePage": 1,
+            "afterPage": 1
+          },
+          {
+            "status": "added",
+            "beforePage": null,
+            "afterPage": 2
+          },
+          {
+            "status": "unchanged",
+            "beforePage": 2,
+            "afterPage": 3
+          },
+          {
+            "status": "unchanged",
+            "beforePage": 3,
+            "afterPage": 4
+          }
+        ]
+      }
+    },
+    {
+      "file": "corpus/visual-only-before.pdf",
+      "description": "Text is the same; a filled rectangle is teal.",
+      "sha256": "e0eb6ff1f7834dc4dbc7f0b158fa56dd7e4d626fa1975e5a7cb4ddae6cd6e99e",
+      "bytes": 1697,
+      "expected": {
+        "outcome": "changed",
+        "rows": [
+          {
+            "status": "changed",
+            "beforePage": 0,
+            "afterPage": 0,
+            "textEqual": true,
+            "visualChanged": true
+          }
+        ]
+      }
+    },
+    {
+      "file": "corpus/visual-only-after.pdf",
+      "description": "Text is the same; the same rectangle is red.",
+      "sha256": "b1843d74445c47fc1f6307f28531004d0507bba39a309db3dc99ad41b63e8059",
+      "bytes": 1692,
+      "expected": {
+        "outcome": "changed",
+        "rows": [
+          {
+            "status": "changed",
+            "beforePage": 0,
+            "afterPage": 0,
+            "textEqual": true,
+            "visualChanged": true
+          }
+        ]
+      }
+    },
+    {
+      "file": "corpus/scanned-image-only.pdf",
+      "description": "A real PDF page with an embedded PNG and no PDF text layer; the label exists only as image pixels.",
+      "sha256": "b2199a991d27d7a8dc883f41cc4e89708aeb09739b2a2554b3e4aee7508c81c6",
+      "bytes": 3337,
+      "expected": {
+        "extractedText": "",
+        "renderedPixelsNonWhite": true,
+        "outcome": "uncertain"
+      }
+    },
+    {
+      "file": "corpus/scanned-image-only-copy.pdf",
+      "description": "Same raster pixels and no PDF text layer, rebuilt with different metadata so the PDF bytes differ.",
+      "sha256": "0d7dbb5acdfd4f62e4a39b9270f01977c8b85cc5ba73a7311d52e1a8770cda20",
+      "bytes": 3369,
+      "expected": {
+        "extractedText": "",
+        "renderedPixelsNonWhite": true,
+        "outcome": "uncertain"
+      }
+    },
+    {
+      "file": "corpus/malformed-truncated.pdf",
+      "description": "Truncated PDF object graph with no pages, xref table, or EOF marker.",
+      "sha256": "e2ce444e8f9b2fa14e1a15e3746d68a67e365c98e7613457da992f2edb63096d",
+      "bytes": 51,
+      "expected": {
+        "error": "PDF_DECODE_FAILED"
+      }
+    },
+    {
+      "file": "corpus/resource-many-pages.pdf",
+      "description": "201 valid pages for page-count budget review; expectations depend on the shipped cap.",
+      "sha256": "ddd87d6723387113742213298bc700787297059e2a56c5da742c17ac5c9a1f12",
+      "bytes": 90314,
+      "expected": {
+        "resourceLimitCandidate": "pageCount",
+        "minimumPages": 201
+      }
+    },
+    {
+      "file": "corpus/resource-large-text.pdf",
+      "description": "41 valid pages with 50,000 selectable ASCII characters per page, exceeding the 2 million document text cap while staying below the 100,000 character page cap.",
+      "sha256": "299ea5f467c4a7bc5ba9e88a61c8da3da366a6db35c7b6c222a1226b5fc96cc3",
+      "bytes": 109866,
+      "expected": {
+        "resourceLimitCandidate": "textCharacters",
+        "pageCount": 41,
+        "minimumTextCharacters": 2050000,
+        "maximumTextCharactersPerPage": 100000
+      }
+    },
+    {
+      "file": "corpus/resource-large-canvas.pdf",
+      "description": "One valid 9000 by 9000 point page; its physical area exceeds 80 million pixels but should be downscaled to the configured per-page render bounds.",
+      "sha256": "0594c4a69d3ab1a6292c3d76f5301605d4fe38ef8376519d20bc410cbd4d8f2c",
+      "bytes": 1647,
+      "expected": {
+        "resourceReview": "safeDownscale",
+        "outcome": "identical"
+      }
+    },
+    {
+      "file": "corpus/resource-large-canvas-copy.pdf",
+      "description": "Same selectable page and physical dimensions, with different metadata so matching requires PDF.js content/rendering.",
+      "sha256": "1f99266c2ea82927fa5e052421caf908b6fb7fcc26ff0764b94d71aeeba70c0c",
+      "bytes": 1727,
+      "expected": {
+        "resourceReview": "safeDownscale",
+        "outcome": "identical"
+      }
+    },
+    {
+      "file": "corpus/resource-rendered-pixels.pdf",
+      "description": "110 valid 794 by 1000 point pages; the before document alone exceeds 80 million scale-1 pixels while each page stays below the per-page render cap.",
+      "sha256": "37cf02c11a380eaf6d198af1763d7176738d1da2385623beeb4078aa0a667f35",
+      "bytes": 50624,
+      "expected": {
+        "resourceLimitCandidate": "decodedPixels",
+        "minimumPixelsAtScale1": 87340000
+      }
+    },
+    {
+      "file": "corpus/cancel-workload.pdf",
+      "description": "Ten valid large render pages for worker-termination acceptance; a same-content copy is provided.",
+      "sha256": "cdb3a1ac92a13be4ac88f8dbe876cf1d9cbbe6e78131a9a58f300bb224156205",
+      "bytes": 7007,
+      "expected": {
+        "resourceReview": "workerTermination"
+      }
+    },
+    {
+      "file": "corpus/cancel-workload-copy.pdf",
+      "description": "Same page content at a separate PDF byte identity, for cancellation acceptance.",
+      "sha256": "002c384cbe2788558a7562c674e5b2be6e215f73c7360e09e796cb6b62c570a3",
+      "bytes": 7047,
+      "expected": {
+        "resourceReview": "workerTermination"
+      }
+    }
+  ]
+}

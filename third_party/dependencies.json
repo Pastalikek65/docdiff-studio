@@ -1,0 +1,4947 @@
+{
+  "schemaVersion": 1,
+  "scope": "Pinned source dependencies; optional uninstalled platform bindings are not present in this build. Browser bundles and Electron distribution are inventoried separately below.",
+  "dependencies": [
+    {
+      "name": "@adobe/css-tools",
+      "version": "4.5.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@asamuzakjp/css-color",
+      "version": "7.1.4",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@asamuzakjp/dom-selector",
+      "version": "9.2.4",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@babel/code-frame",
+      "version": "7.29.7",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@babel/helper-validator-identifier",
+      "version": "7.29.7",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@babel/runtime",
+      "version": "7.29.10",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@bramus/specificity",
+      "version": "2.4.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@csstools/color-helpers",
+      "version": "6.1.2",
+      "license": "MIT-0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@csstools/css-calc",
+      "version": "3.4.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@csstools/css-color-parser",
+      "version": "4.2.6",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@csstools/css-parser-algorithms",
+      "version": "4.0.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@csstools/css-syntax-patches-for-csstree",
+      "version": "1.1.15",
+      "license": "MIT-0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@csstools/css-tokenizer",
+      "version": "4.0.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@electron-internal/extract-zip",
+      "version": "1.0.5",
+      "license": "BSD-2-Clause",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@electron/asar",
+      "version": "3.4.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@electron/fuses",
+      "version": "1.8.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@electron/get",
+      "version": "5.1.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@electron/get",
+      "version": "3.1.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@electron/notarize",
+      "version": "2.5.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@electron/osx-sign",
+      "version": "1.3.3",
+      "license": "BSD-2-Clause",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@electron/rebuild",
+      "version": "4.2.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@electron/universal",
+      "version": "2.0.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@electron/windows-sign",
+      "version": "1.2.2",
+      "license": "BSD-2-Clause",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@esbuild/aix-ppc64",
+      "version": "0.28.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@esbuild/android-arm",
+      "version": "0.28.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@esbuild/android-arm64",
+      "version": "0.28.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@esbuild/android-x64",
+      "version": "0.28.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@esbuild/darwin-arm64",
+      "version": "0.28.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@esbuild/darwin-x64",
+      "version": "0.28.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@esbuild/freebsd-arm64",
+      "version": "0.28.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@esbuild/freebsd-x64",
+      "version": "0.28.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@esbuild/linux-arm",
+      "version": "0.28.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@esbuild/linux-arm64",
+      "version": "0.28.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@esbuild/linux-ia32",
+      "version": "0.28.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@esbuild/linux-loong64",
+      "version": "0.28.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@esbuild/linux-mips64el",
+      "version": "0.28.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@esbuild/linux-ppc64",
+      "version": "0.28.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@esbuild/linux-riscv64",
+      "version": "0.28.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@esbuild/linux-s390x",
+      "version": "0.28.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@esbuild/linux-x64",
+      "version": "0.28.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@esbuild/netbsd-arm64",
+      "version": "0.28.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@esbuild/netbsd-x64",
+      "version": "0.28.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@esbuild/openbsd-arm64",
+      "version": "0.28.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@esbuild/openbsd-x64",
+      "version": "0.28.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@esbuild/openharmony-arm64",
+      "version": "0.28.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@esbuild/sunos-x64",
+      "version": "0.28.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@esbuild/win32-arm64",
+      "version": "0.28.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@esbuild/win32-ia32",
+      "version": "0.28.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@esbuild/win32-x64",
+      "version": "0.28.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@exodus/bytes",
+      "version": "1.16.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@isaacs/fs-minipass",
+      "version": "4.0.1",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@jridgewell/resolve-uri",
+      "version": "3.1.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@jridgewell/sourcemap-codec",
+      "version": "1.6.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@jridgewell/trace-mapping",
+      "version": "0.3.31",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@malept/cross-spawn-promise",
+      "version": "2.0.0",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@malept/flatpak-bundler",
+      "version": "0.4.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@napi-rs/canvas",
+      "version": "1.0.10",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@napi-rs/canvas-android-arm64",
+      "version": "1.0.10",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@napi-rs/canvas-darwin-arm64",
+      "version": "1.0.10",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@napi-rs/canvas-darwin-x64",
+      "version": "1.0.10",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@napi-rs/canvas-linux-arm-gnueabihf",
+      "version": "1.0.10",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@napi-rs/canvas-linux-arm64-gnu",
+      "version": "1.0.10",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@napi-rs/canvas-linux-arm64-musl",
+      "version": "1.0.10",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@napi-rs/canvas-linux-riscv64-gnu",
+      "version": "1.0.10",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@napi-rs/canvas-linux-x64-gnu",
+      "version": "1.0.10",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@napi-rs/canvas-linux-x64-musl",
+      "version": "1.0.10",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@napi-rs/canvas-win32-arm64-msvc",
+      "version": "1.0.10",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@napi-rs/canvas-win32-x64-msvc",
+      "version": "1.0.10",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@noble/hashes",
+      "version": "2.4.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@noble/hashes",
+      "version": "1.8.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@nodable/entities",
+      "version": "3.1.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": true,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": [
+        {
+          "path": "third_party/npm/@nodable__entities/LICENSE",
+          "sha256": "750cb3fb6362804957ef52caaf9b5c824015be44d494637330d7cd8834d31d40",
+          "upstreamCommit": "ac48e7ea591da372be023a481875c747535812b3"
+        }
+      ]
+    },
+    {
+      "name": "@oxc-project/types",
+      "version": "0.153.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@pdf-lib/standard-fonts",
+      "version": "1.0.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@pdf-lib/upng",
+      "version": "1.0.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@peculiar/asn1-schema",
+      "version": "2.10.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@peculiar/json-schema",
+      "version": "1.1.12",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@peculiar/utils",
+      "version": "2.0.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@peculiar/webcrypto",
+      "version": "1.7.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@rolldown/binding-android-arm-eabi",
+      "version": "1.2.13",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@rolldown/binding-android-arm64",
+      "version": "1.2.13",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@rolldown/binding-darwin-arm64",
+      "version": "1.2.13",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@rolldown/binding-darwin-x64",
+      "version": "1.2.13",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@rolldown/binding-freebsd-x64",
+      "version": "1.2.13",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@rolldown/binding-linux-arm-gnueabihf",
+      "version": "1.2.13",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@rolldown/binding-linux-arm64-gnu",
+      "version": "1.2.13",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@rolldown/binding-linux-arm64-musl",
+      "version": "1.2.13",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@rolldown/binding-linux-ppc64-gnu",
+      "version": "1.2.13",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@rolldown/binding-linux-s390x-gnu",
+      "version": "1.2.13",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@rolldown/binding-linux-x64-gnu",
+      "version": "1.2.13",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@rolldown/binding-linux-x64-musl",
+      "version": "1.2.13",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@rolldown/binding-openharmony-arm64",
+      "version": "1.2.13",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@rolldown/binding-win32-arm64-msvc",
+      "version": "1.2.13",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@rolldown/binding-win32-x64-msvc",
+      "version": "1.2.13",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@rolldown/pluginutils",
+      "version": "1.0.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@sindresorhus/is",
+      "version": "4.6.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@szmarczak/http-timer",
+      "version": "4.0.6",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@testing-library/dom",
+      "version": "10.4.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@testing-library/jest-dom",
+      "version": "7.0.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@testing-library/react",
+      "version": "16.3.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@testing-library/user-event",
+      "version": "14.6.7",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@types/aria-query",
+      "version": "5.0.4",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@types/cacheable-request",
+      "version": "6.0.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@types/chai",
+      "version": "5.2.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@types/debug",
+      "version": "4.1.13",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@types/deep-eql",
+      "version": "4.0.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@types/estree",
+      "version": "1.0.9",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@types/fs-extra",
+      "version": "9.0.13",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@types/http-cache-semantics",
+      "version": "4.2.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@types/keyv",
+      "version": "3.1.4",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@types/ms",
+      "version": "2.1.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@types/node",
+      "version": "26.6.4",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@types/node",
+      "version": "24.19.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@types/react",
+      "version": "19.3.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@types/react-dom",
+      "version": "19.3.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@types/responselike",
+      "version": "1.0.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@typescript/typescript-aix-ppc64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@typescript/typescript-darwin-arm64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@typescript/typescript-darwin-x64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@typescript/typescript-freebsd-arm64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@typescript/typescript-freebsd-x64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@typescript/typescript-linux-arm",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@typescript/typescript-linux-arm64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@typescript/typescript-linux-loong64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@typescript/typescript-linux-mips64el",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@typescript/typescript-linux-ppc64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@typescript/typescript-linux-riscv64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@typescript/typescript-linux-s390x",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@typescript/typescript-linux-x64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@typescript/typescript-netbsd-arm64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@typescript/typescript-netbsd-x64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@typescript/typescript-openbsd-arm64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@typescript/typescript-openbsd-x64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@typescript/typescript-sunos-x64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@typescript/typescript-win32-arm64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "@typescript/typescript-win32-x64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@vitejs/plugin-react",
+      "version": "6.1.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@vitest/mocker",
+      "version": "5.0.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@vitest/spy",
+      "version": "5.0.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "@xmldom/xmldom",
+      "version": "0.8.15",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "abbrev",
+      "version": "4.0.0",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "agent-base",
+      "version": "7.1.4",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "ajv",
+      "version": "8.20.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "ansi-regex",
+      "version": "5.0.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "ansi-styles",
+      "version": "4.3.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "ansi-styles",
+      "version": "5.2.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "anynum",
+      "version": "1.0.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": true,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": [
+        {
+          "path": "third_party/npm/anynum/LICENSE",
+          "sha256": "8e75fc0e776c62ccadb8178ece8d3daa9ba7601fb0a49b2dfb0ea9a7a5c0aa07"
+        }
+      ]
+    },
+    {
+      "name": "app-builder-lib",
+      "version": "26.15.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "argparse",
+      "version": "2.0.1",
+      "license": "Python-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "aria-query",
+      "version": "5.3.0",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "asn1js",
+      "version": "3.0.10",
+      "license": "BSD-3-Clause",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "assertion-error",
+      "version": "2.0.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "async",
+      "version": "3.2.6",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "async-exit-hook",
+      "version": "2.0.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "asynckit",
+      "version": "0.4.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "at-least-node",
+      "version": "1.0.0",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "aws4",
+      "version": "1.13.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "balanced-match",
+      "version": "1.0.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "balanced-match",
+      "version": "1.0.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "balanced-match",
+      "version": "4.0.4",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "balanced-match",
+      "version": "1.0.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "balanced-match",
+      "version": "1.0.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "balanced-match",
+      "version": "1.0.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "base64-js",
+      "version": "1.5.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "bidi-js",
+      "version": "1.1.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "bluebird",
+      "version": "3.7.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "boolean",
+      "version": "3.2.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "brace-expansion",
+      "version": "1.1.21",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "brace-expansion",
+      "version": "2.1.7",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "brace-expansion",
+      "version": "5.0.12",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "brace-expansion",
+      "version": "1.1.21",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "brace-expansion",
+      "version": "2.1.7",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "brace-expansion",
+      "version": "1.1.21",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "buffer-from",
+      "version": "1.1.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "builder-util",
+      "version": "26.15.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "builder-util-runtime",
+      "version": "9.7.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "bytestreamjs",
+      "version": "2.0.1",
+      "license": "BSD-3-Clause",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "cacheable-lookup",
+      "version": "5.0.4",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "cacheable-request",
+      "version": "7.0.4",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "call-bind-apply-helpers",
+      "version": "1.0.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "chai",
+      "version": "6.3.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "chalk",
+      "version": "4.1.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "chownr",
+      "version": "3.0.0",
+      "license": "BlueOak-1.0.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "chromium-pickle-js",
+      "version": "0.2.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "ci-info",
+      "version": "4.3.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "ci-info",
+      "version": "4.4.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "cliui",
+      "version": "8.0.1",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "clone-response",
+      "version": "1.0.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "color-convert",
+      "version": "2.0.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "color-name",
+      "version": "1.1.4",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "combined-stream",
+      "version": "1.0.8",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "commander",
+      "version": "5.1.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "commander",
+      "version": "9.5.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "compare-version",
+      "version": "0.1.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "concat-map",
+      "version": "0.0.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "core-util-is",
+      "version": "1.0.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "cross-dirname",
+      "version": "0.1.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "cross-spawn",
+      "version": "7.0.6",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "css-tree",
+      "version": "3.2.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "css.escape",
+      "version": "1.5.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "csstype",
+      "version": "3.2.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "data-urls",
+      "version": "8.0.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "debug",
+      "version": "4.4.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "decimal.js",
+      "version": "10.6.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "decompress-response",
+      "version": "6.0.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "defer-to-connect",
+      "version": "2.0.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "define-data-property",
+      "version": "1.1.4",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "define-properties",
+      "version": "1.2.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "delayed-stream",
+      "version": "1.0.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "dequal",
+      "version": "2.0.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "detect-libc",
+      "version": "2.1.2",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "detect-node",
+      "version": "2.1.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "diff",
+      "version": "9.0.0",
+      "license": "BSD-3-Clause",
+      "developmentDependency": true,
+      "browserBundleCandidate": true,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": [
+        {
+          "path": "third_party/npm/diff/LICENSE",
+          "sha256": "eda81a415869e67809f6a9f3fd6056062cb83a462118e07eec5e92b2e0c40ce9"
+        }
+      ]
+    },
+    {
+      "name": "dir-compare",
+      "version": "4.2.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "dmg-builder",
+      "version": "26.15.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "dom-accessibility-api",
+      "version": "0.6.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "dom-accessibility-api",
+      "version": "0.5.16",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "dotenv",
+      "version": "16.6.1",
+      "license": "BSD-2-Clause",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "dotenv-expand",
+      "version": "11.0.7",
+      "license": "BSD-2-Clause",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "dunder-proto",
+      "version": "1.0.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "duplexer2",
+      "version": "0.1.4",
+      "license": "BSD-3-Clause",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "ejs",
+      "version": "3.1.10",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "electron",
+      "version": "44.7.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "electron-builder",
+      "version": "26.15.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "electron-builder-squirrel-windows",
+      "version": "26.15.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "electron-publish",
+      "version": "26.15.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "electron-winstaller",
+      "version": "5.4.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "emoji-regex",
+      "version": "8.0.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "end-of-stream",
+      "version": "1.4.5",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "entities",
+      "version": "8.1.0",
+      "license": "BSD-2-Clause",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "env-paths",
+      "version": "2.2.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "env-paths",
+      "version": "3.0.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "env-paths",
+      "version": "2.2.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "err-code",
+      "version": "2.0.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "es-define-property",
+      "version": "1.0.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "es-errors",
+      "version": "1.3.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "es-module-lexer",
+      "version": "2.3.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "es-object-atoms",
+      "version": "1.1.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "es-set-tostringtag",
+      "version": "2.1.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "es6-error",
+      "version": "4.1.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "esbuild",
+      "version": "0.28.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "escalade",
+      "version": "3.2.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "escape-string-regexp",
+      "version": "4.0.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "estree-walker",
+      "version": "3.0.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "expect-type",
+      "version": "1.4.0",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "exponential-backoff",
+      "version": "3.1.3",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "fast-deep-equal",
+      "version": "3.1.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "fast-uri",
+      "version": "3.1.8",
+      "license": "BSD-3-Clause",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "fast-xml-builder",
+      "version": "1.3.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": true,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": [
+        {
+          "path": "third_party/npm/fast-xml-builder/LICENSE",
+          "sha256": "8e75fc0e776c62ccadb8178ece8d3daa9ba7601fb0a49b2dfb0ea9a7a5c0aa07"
+        }
+      ]
+    },
+    {
+      "name": "fast-xml-parser",
+      "version": "5.11.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": true,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": [
+        {
+          "path": "third_party/npm/fast-xml-parser/LICENSE",
+          "sha256": "7883225d5e84a6bbb9b170c3d891b4bf6d6259cee869c86bd86381a927071745"
+        }
+      ]
+    },
+    {
+      "name": "fdir",
+      "version": "6.5.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "fflate",
+      "version": "0.8.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": true,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": [
+        {
+          "path": "third_party/npm/fflate/LICENSE",
+          "sha256": "0a1df3a083d0c010560aa342e87959c8c1070e6fd54545741f083f22d0c8b551"
+        }
+      ]
+    },
+    {
+      "name": "filelist",
+      "version": "1.0.6",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "form-data",
+      "version": "4.0.6",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "fs-extra",
+      "version": "9.1.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "fs-extra",
+      "version": "9.1.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "fs-extra",
+      "version": "11.4.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "fs-extra",
+      "version": "11.4.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "fs-extra",
+      "version": "9.1.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "fs-extra",
+      "version": "8.1.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "fs-extra",
+      "version": "7.0.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "fs-extra",
+      "version": "10.1.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "fs-extra",
+      "version": "11.3.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "fs.realpath",
+      "version": "1.0.0",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "fsevents",
+      "version": "2.3.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "function-bind",
+      "version": "1.1.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "get-caller-file",
+      "version": "2.0.5",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "get-intrinsic",
+      "version": "1.3.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "get-proto",
+      "version": "1.0.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "get-stream",
+      "version": "5.2.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "glob",
+      "version": "7.2.3",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "global-agent",
+      "version": "3.0.0",
+      "license": "BSD-3-Clause",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "globalthis",
+      "version": "1.0.4",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "gopd",
+      "version": "1.2.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "got",
+      "version": "11.8.6",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "graceful-fs",
+      "version": "4.2.11",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "has-flag",
+      "version": "4.0.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "has-property-descriptors",
+      "version": "1.0.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "has-symbols",
+      "version": "1.1.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "has-tostringtag",
+      "version": "1.0.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "hasown",
+      "version": "2.0.4",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "hosted-git-info",
+      "version": "4.1.0",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "html-encoding-sniffer",
+      "version": "7.0.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "http-cache-semantics",
+      "version": "4.3.0",
+      "license": "BSD-2-Clause",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "http-proxy-agent",
+      "version": "7.0.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "http2-wrapper",
+      "version": "1.0.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "https-proxy-agent",
+      "version": "7.0.6",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "indent-string",
+      "version": "4.0.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "inflight",
+      "version": "1.0.6",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "inherits",
+      "version": "2.0.4",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "is-fullwidth-code-point",
+      "version": "3.0.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "is-potential-custom-element-name",
+      "version": "1.0.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "is-unsafe",
+      "version": "2.0.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": true,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": [
+        {
+          "path": "third_party/npm/is-unsafe/LICENSE",
+          "sha256": "8e75fc0e776c62ccadb8178ece8d3daa9ba7601fb0a49b2dfb0ea9a7a5c0aa07"
+        }
+      ]
+    },
+    {
+      "name": "isarray",
+      "version": "1.0.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "isbinaryfile",
+      "version": "4.0.10",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "isbinaryfile",
+      "version": "5.0.7",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "isexe",
+      "version": "2.0.0",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "isexe",
+      "version": "3.1.5",
+      "license": "BlueOak-1.0.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "isexe",
+      "version": "4.0.0",
+      "license": "BlueOak-1.0.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "jake",
+      "version": "10.9.4",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "jiti",
+      "version": "2.7.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "js-tokens",
+      "version": "4.0.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "js-yaml",
+      "version": "4.3.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "jsdom",
+      "version": "30.1.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "json-buffer",
+      "version": "3.0.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "json-schema-traverse",
+      "version": "1.0.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "json-stringify-safe",
+      "version": "5.0.1",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "json5",
+      "version": "2.2.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "jsonfile",
+      "version": "4.0.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "jsonfile",
+      "version": "4.0.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "jsonfile",
+      "version": "6.2.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "keyv",
+      "version": "4.5.4",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "lazy-val",
+      "version": "1.0.5",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "lightningcss",
+      "version": "1.33.0",
+      "license": "MPL-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "lightningcss-android-arm64",
+      "version": "1.33.0",
+      "license": "MPL-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "lightningcss-darwin-arm64",
+      "version": "1.33.0",
+      "license": "MPL-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "lightningcss-darwin-x64",
+      "version": "1.33.0",
+      "license": "MPL-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "lightningcss-freebsd-x64",
+      "version": "1.33.0",
+      "license": "MPL-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "lightningcss-linux-arm-gnueabihf",
+      "version": "1.33.0",
+      "license": "MPL-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "lightningcss-linux-arm64-gnu",
+      "version": "1.33.0",
+      "license": "MPL-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "lightningcss-linux-arm64-musl",
+      "version": "1.33.0",
+      "license": "MPL-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "lightningcss-linux-x64-gnu",
+      "version": "1.33.0",
+      "license": "MPL-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "lightningcss-linux-x64-musl",
+      "version": "1.33.0",
+      "license": "MPL-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "lightningcss-win32-arm64-msvc",
+      "version": "1.33.0",
+      "license": "MPL-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": false,
+      "licenseFiles": []
+    },
+    {
+      "name": "lightningcss-win32-x64-msvc",
+      "version": "1.33.0",
+      "license": "MPL-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "lodash",
+      "version": "4.18.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "lowercase-keys",
+      "version": "2.0.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "lru-cache",
+      "version": "11.5.3",
+      "license": "BlueOak-1.0.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "lru-cache",
+      "version": "11.5.3",
+      "license": "BlueOak-1.0.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "lru-cache",
+      "version": "11.5.3",
+      "license": "BlueOak-1.0.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "lru-cache",
+      "version": "6.0.0",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "lz-string",
+      "version": "1.5.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "magic-string",
+      "version": "1.4.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "matcher",
+      "version": "3.0.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "math-intrinsics",
+      "version": "1.1.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "mdn-data",
+      "version": "2.27.1",
+      "license": "CC0-1.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "mime",
+      "version": "2.6.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "mime-db",
+      "version": "1.52.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "mime-types",
+      "version": "2.1.35",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "mimic-response",
+      "version": "3.1.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "mimic-response",
+      "version": "1.0.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "min-indent",
+      "version": "1.0.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "minimatch",
+      "version": "3.1.5",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "minimatch",
+      "version": "9.0.9",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "minimatch",
+      "version": "3.1.5",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "minimatch",
+      "version": "5.1.9",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "minimatch",
+      "version": "3.1.5",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "minimatch",
+      "version": "10.2.6",
+      "license": "BlueOak-1.0.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "minimist",
+      "version": "1.2.8",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "minipass",
+      "version": "7.1.3",
+      "license": "BlueOak-1.0.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "minizlib",
+      "version": "3.1.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "mkdirp",
+      "version": "0.5.6",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "ms",
+      "version": "2.1.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "nanoid",
+      "version": "3.3.20",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "node-abi",
+      "version": "4.37.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "node-api-version",
+      "version": "0.2.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "node-gyp",
+      "version": "12.4.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "node-int64",
+      "version": "0.4.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "nopt",
+      "version": "9.0.0",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "normalize-url",
+      "version": "6.1.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "object-keys",
+      "version": "1.1.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "obug",
+      "version": "2.2.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "once",
+      "version": "1.4.0",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "p-cancelable",
+      "version": "2.1.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "p-limit",
+      "version": "3.1.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "pako",
+      "version": "1.0.11",
+      "license": "(MIT AND Zlib)",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "parse5",
+      "version": "8.0.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "path-expression-matcher",
+      "version": "1.6.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": true,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": [
+        {
+          "path": "third_party/npm/path-expression-matcher/LICENSE",
+          "sha256": "75486ea0af9309140ca6e2c401d7e67bea8f4892344e5707f6394dc5e83dfc44"
+        }
+      ]
+    },
+    {
+      "name": "path-is-absolute",
+      "version": "1.0.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "path-key",
+      "version": "3.1.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "pdf-lib",
+      "version": "1.17.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "pdfjs-dist",
+      "version": "6.4.299",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": true,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": [
+        {
+          "path": "third_party/npm/pdfjs-dist/LICENSE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        }
+      ]
+    },
+    {
+      "name": "pe-library",
+      "version": "0.4.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "picocolors",
+      "version": "1.1.1",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "picomatch",
+      "version": "4.0.7",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "pkijs",
+      "version": "3.4.1",
+      "license": "BSD-3-Clause",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "playwright",
+      "version": "1.64.0",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "playwright-core",
+      "version": "1.64.0",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "plist",
+      "version": "3.1.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "postcss",
+      "version": "8.5.29",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "postject",
+      "version": "1.0.0-alpha.6",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "pretty-format",
+      "version": "27.5.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "proc-log",
+      "version": "6.1.0",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "process-nextick-args",
+      "version": "2.0.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "progress",
+      "version": "2.0.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "promise-retry",
+      "version": "2.0.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "proper-lockfile",
+      "version": "4.1.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "pump",
+      "version": "3.0.4",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "punycode",
+      "version": "2.3.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "pvtsutils",
+      "version": "1.3.6",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "pvutils",
+      "version": "1.2.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "quick-lru",
+      "version": "5.1.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "react",
+      "version": "19.3.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": true,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": [
+        {
+          "path": "third_party/npm/react/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    },
+    {
+      "name": "react-dom",
+      "version": "19.3.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": true,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": [
+        {
+          "path": "third_party/npm/react-dom/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    },
+    {
+      "name": "react-is",
+      "version": "17.0.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "read-binary-file-arch",
+      "version": "1.0.6",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "readable-stream",
+      "version": "2.3.8",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "redent",
+      "version": "3.0.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "require-directory",
+      "version": "2.1.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "require-from-string",
+      "version": "2.0.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "resedit",
+      "version": "1.7.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "resolve-alpn",
+      "version": "1.2.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "responselike",
+      "version": "2.0.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "retry",
+      "version": "0.12.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "rimraf",
+      "version": "2.6.3",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "roarr",
+      "version": "2.15.4",
+      "license": "BSD-3-Clause",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "rolldown",
+      "version": "1.2.13",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "safe-buffer",
+      "version": "5.1.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "sanitize-filename",
+      "version": "1.6.4",
+      "license": "WTFPL OR ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "sax",
+      "version": "1.6.1",
+      "license": "BlueOak-1.0.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "saxes",
+      "version": "6.0.0",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "scheduler",
+      "version": "0.28.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": true,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": [
+        {
+          "path": "third_party/npm/scheduler/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    },
+    {
+      "name": "semver",
+      "version": "6.3.1",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "semver",
+      "version": "7.7.4",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "semver",
+      "version": "7.8.5",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "semver",
+      "version": "5.7.2",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "semver-compare",
+      "version": "1.0.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "serialize-error",
+      "version": "7.0.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "shebang-command",
+      "version": "2.0.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "shebang-regex",
+      "version": "3.0.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "signal-exit",
+      "version": "3.0.7",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "simple-update-notifier",
+      "version": "2.0.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "source-map",
+      "version": "0.6.1",
+      "license": "BSD-3-Clause",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "source-map-js",
+      "version": "1.2.2",
+      "license": "BSD-3-Clause",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "source-map-support",
+      "version": "0.5.21",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "sprintf-js",
+      "version": "1.1.3",
+      "license": "BSD-3-Clause",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "stat-mode",
+      "version": "1.0.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "std-env",
+      "version": "4.3.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "string_decoder",
+      "version": "1.1.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "string-width",
+      "version": "4.2.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "strip-ansi",
+      "version": "6.0.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "strip-indent",
+      "version": "3.0.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "strnum",
+      "version": "2.4.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": true,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": [
+        {
+          "path": "third_party/npm/strnum/LICENSE",
+          "sha256": "2aa16be0f4fad003a352a955a43314e9d1d8deef7034060a82ac9c49f32b81e2"
+        }
+      ]
+    },
+    {
+      "name": "sumchecker",
+      "version": "3.0.1",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "supports-color",
+      "version": "7.2.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "tar",
+      "version": "7.5.22",
+      "license": "BlueOak-1.0.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "temp",
+      "version": "0.9.4",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "temp-file",
+      "version": "3.4.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "tiny-async-pool",
+      "version": "1.3.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "tinybench",
+      "version": "6.2.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "tinyexec",
+      "version": "1.3.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "tinyglobby",
+      "version": "0.2.17",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "tldts",
+      "version": "7.4.18",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "tldts-core",
+      "version": "7.4.18",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "tmp",
+      "version": "0.2.7",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "tmp-promise",
+      "version": "3.0.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "tough-cookie",
+      "version": "6.0.2",
+      "license": "BSD-3-Clause",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "tr46",
+      "version": "7.0.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "truncate-utf8-bytes",
+      "version": "1.0.2",
+      "license": "WTFPL",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "tslib",
+      "version": "1.14.1",
+      "license": "0BSD",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "tslib",
+      "version": "2.8.1",
+      "license": "0BSD",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "tsx",
+      "version": "4.23.15",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "type-fest",
+      "version": "0.13.1",
+      "license": "(MIT OR CC0-1.0)",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "typescript",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "undici",
+      "version": "8.11.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "undici",
+      "version": "6.29.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "undici",
+      "version": "7.30.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": true,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "undici-types",
+      "version": "7.24.6",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "undici-types",
+      "version": "8.9.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "universalify",
+      "version": "0.1.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "universalify",
+      "version": "0.1.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "universalify",
+      "version": "2.0.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "unzipper",
+      "version": "0.12.5",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "utf8-byte-length",
+      "version": "1.0.5",
+      "license": "(WTFPL OR MIT)",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "util-deprecate",
+      "version": "1.0.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "vite",
+      "version": "8.3.4",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "vitest",
+      "version": "5.0.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "w3c-xmlserializer",
+      "version": "6.0.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "webcrypto-core",
+      "version": "1.9.2",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "webidl-conversions",
+      "version": "8.0.1",
+      "license": "BSD-2-Clause",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "whatwg-mimetype",
+      "version": "5.0.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "whatwg-url",
+      "version": "17.2.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "which",
+      "version": "2.0.2",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "which",
+      "version": "6.0.1",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "which",
+      "version": "5.0.0",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "why-is-node-running",
+      "version": "3.2.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "wrap-ansi",
+      "version": "7.0.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "wrappy",
+      "version": "1.0.2",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "xml-name-validator",
+      "version": "5.0.0",
+      "license": "Apache-2.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "xml-naming",
+      "version": "0.3.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": true,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": [
+        {
+          "path": "third_party/npm/xml-naming/LICENSE",
+          "sha256": "8e75fc0e776c62ccadb8178ece8d3daa9ba7601fb0a49b2dfb0ea9a7a5c0aa07"
+        }
+      ]
+    },
+    {
+      "name": "xmlbuilder",
+      "version": "15.1.1",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "xmlchars",
+      "version": "2.2.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "y18n",
+      "version": "5.0.8",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "yallist",
+      "version": "5.0.0",
+      "license": "BlueOak-1.0.0",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "yallist",
+      "version": "4.0.0",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "yargs",
+      "version": "17.7.3",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "yargs-parser",
+      "version": "21.1.1",
+      "license": "ISC",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    },
+    {
+      "name": "yocto-queue",
+      "version": "0.1.0",
+      "license": "MIT",
+      "developmentDependency": true,
+      "browserBundleCandidate": false,
+      "optional": false,
+      "installed": true,
+      "licenseFiles": []
+    }
+  ]
+}

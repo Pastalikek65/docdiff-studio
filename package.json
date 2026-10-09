@@ -1,0 +1,99 @@
+{
+  "name": "docdiff-studio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Compare document revisions locally with text changes, visual differences and shareable reports.",
+  "license": "Apache-2.0",
+  "author": "Pastalikek65",
+  "repository": "https://github.com/Pastalikek65/docdiff-studio",
+  "engines": {
+    "node": "^24.0.0"
+  },
+  "main": "dist-electron/electron/main.js",
+  "scripts": {
+    "dev": "vite --host localhost --port 5173 --strictPort",
+    "assets": "node scripts/vendor-assets.mjs",
+    "build": "npm run assets && tsc -p tsconfig.electron.json && vite build",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.electron.json --noEmit",
+    "test": "vitest run",
+    "start": "electron .",
+    "fixtures": "node examples/generate.mjs",
+    "test:e2e": "node scripts/acceptance.mjs",
+    "package": "npm run build && node scripts/distribution-notices.mjs && electron-builder"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "7.0.1",
+    "@testing-library/react": "16.3.3",
+    "@testing-library/user-event": "14.6.7",
+    "@types/node": "26.6.4",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "electron": "44.7.0",
+    "electron-builder": "26.15.3",
+    "jsdom": "30.1.2",
+    "pdf-lib": "1.17.1",
+    "playwright": "1.64.0",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vite": "8.3.4",
+    "vitest": "5.0.3",
+    "diff": "9.0.0",
+    "fast-xml-parser": "5.11.2",
+    "fflate": "0.8.3",
+    "pdfjs-dist": "6.4.299",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "build": {
+    "appId": "io.github.pastalikek65.docdiffstudio",
+    "productName": "DocDiff Studio",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**",
+      "dist-electron/**",
+      "package.json",
+      "LICENSE",
+      "THIRD_PARTY.md",
+      "third_party/**",
+      "README.md",
+      "docs/**",
+      "examples/**"
+    ],
+    "asar": true,
+    "win": {
+      "target": [
+        {
+          "target": "zip",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "signAndEditExecutable": false
+    },
+    "linux": {
+      "target": [
+        {
+          "target": "tar.gz",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "category": "Office"
+    },
+    "artifactName": "docdiff-studio-${version}-${os}-${arch}.${ext}"
+  },
+  "bundledBrowserDependencies": [
+    "diff",
+    "fast-xml-parser",
+    "fflate",
+    "pdfjs-dist",
+    "react",
+    "react-dom"
+  ]
+}

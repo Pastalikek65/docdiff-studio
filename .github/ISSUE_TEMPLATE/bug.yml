@@ -1,0 +1,15 @@
+name: Bug report
+description: Report a reproducible problem with synthetic documents
+body:
+  - type: textarea
+    id: problem
+    attributes: { label: What happened?, description: Include the expected and actual behavior. Do not attach private documents. }
+    validations: { required: true }
+  - type: input
+    id: version
+    attributes: { label: Version and platform }
+    validations: { required: true }
+  - type: textarea
+    id: reproduce
+    attributes: { label: Steps and synthetic reproducer }
+    validations: { required: true }

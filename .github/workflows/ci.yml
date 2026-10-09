@@ -1,0 +1,111 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-24.04]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npx install-electron --no
+      - run: npx playwright install --with-deps chromium
+        timeout-minutes: 15
+      - name: Linux desktop prerequisites and scoped sandbox profiles
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo timeout 5m apt-get update
+          sudo timeout 10m apt-get install -y --no-install-recommends xvfb apparmor
+          sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=1
+          test "$(cat /proc/sys/kernel/apparmor_restrict_unprivileged_userns)" = 1
+          source_profile=$(mktemp)
+          trap 'rm -f "$source_profile"' EXIT
+          cat > "$source_profile" <<EOF
+          abi <abi/4.0>,
+          include <tunables/global>
+          profile docdiff-ci-electron ${GITHUB_WORKSPACE}/node_modules/electron/dist/electron flags=(unconfined) { userns, }
+          profile docdiff-ci-chromium ${HOME}/.cache/ms-playwright/chromium-*/chrome-linux64/chrome flags=(unconfined) { userns, }
+          profile docdiff-ci-headless ${HOME}/.cache/ms-playwright/chromium_headless_shell-*/chrome-headless-shell-linux64/chrome-headless-shell flags=(unconfined) { userns, }
+          profile docdiff-ci-package /opt/docdiff-ci/**/docdiff-studio flags=(unconfined) { userns, }
+          EOF
+          sudo install -o root -g root -m 0644 "$source_profile" /etc/apparmor.d/docdiff-ci
+          sudo apparmor_parser -r /etc/apparmor.d/docdiff-ci
+          for name in docdiff-ci-electron docdiff-ci-chromium docdiff-ci-headless docdiff-ci-package; do
+            sudo grep -Fq "$name" /sys/kernel/security/apparmor/profiles
+          done
+      - run: npm run typecheck
+      - run: npm run build
+      - name: Windows tests and actual desktop flow
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          npm test
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          npm run test:e2e
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Linux tests and actual desktop flow
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          set -euo pipefail
+          xvfb-run --auto-servernum npm test
+          xvfb-run --auto-servernum npm run test:e2e
+      - run: npm audit --audit-level=high
+      - run: npm run package
+      - name: Windows fresh archive acceptance
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          $archives = @(Get-ChildItem release -Filter '*.zip')
+          if ($archives.Count -ne 1) { throw 'Expected one Windows archive.' }
+          Expand-Archive -LiteralPath $archives[0].FullName -DestinationPath artifacts/install
+          node scripts/acceptance.mjs --executable "${pwd}/artifacts/install/DocDiff Studio.exe"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Linux fresh archive acceptance
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(id -u)" -ne 0
+          mapfile -t archives < <(find release -maxdepth 1 -type f -name '*.tar.gz')
+          test "${#archives[@]}" -eq 1
+          sudo install -d -o root -g root -m 755 /opt/docdiff-ci
+          sudo tar --no-same-owner -xzf "${archives[0]}" -C /opt/docdiff-ci
+          mapfile -t executables < <(find /opt/docdiff-ci -type f -name docdiff-studio)
+          mapfile -t sandboxes < <(find /opt/docdiff-ci -type f -name chrome-sandbox)
+          test "${#executables[@]}" -eq 1
+          test "${#sandboxes[@]}" -eq 1
+          sudo chown -R root:root /opt/docdiff-ci
+          sudo chmod -R go-w /opt/docdiff-ci
+          sudo chmod 4755 "${sandboxes[0]}"
+          test "$(stat -c '%U:%G:%a' "${sandboxes[0]}")" = 'root:root:4755'
+          xvfb-run --auto-servernum node scripts/acceptance.mjs --executable "${executables[0]}"
+      - run: node scripts/checksums.mjs
+      - uses: actions/upload-artifact@v7.0.2
+        if: always()
+        with:
+          name: docdiff-${{ runner.os }}-${{ github.sha }}
+          path: |
+            release/*.zip
+            release/*.tar.gz
+            release/SHA256SUMS.txt
+            artifacts/acceptance-*/acceptance.json
+            artifacts/acceptance-*/failure.json
+            artifacts/acceptance-*/review.png
+            artifacts/acceptance-*/failure.png

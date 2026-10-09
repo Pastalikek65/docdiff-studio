@@ -1,0 +1,11 @@
+node_modules/
+dist/
+dist-electron/
+release/
+artifacts/
+.control/
+*.log
+coverage/
+playwright-report/
+test-results/
+public/vendor/
