@@ -543,7 +543,7 @@ async function main() {
   const args = parseArgs(process.argv.slice(2));
   const { artifactRoot } = await createPublicRunDirectory();
   const profilePath = path.join(artifactRoot, 'synthetic-profile');
-  const reportsPath = path.join(artifactRoot, 'reports');
+  const reportsPath = artifactRoot;
 
   const startedAt = new Date().toISOString();
   const steps = [];
@@ -566,7 +566,6 @@ async function main() {
   const cleanupErrors = [];
 
   try {
-    await mkdir(reportsPath, { recursive: false });
     assert.equal(await lstat(profilePath).then(() => true, () => false), false, 'The unique synthetic profile must start absent.');
     versions = await validateVersions(args);
     const { old: oldIdentity, target: newIdentity } = await validatePackageInputs(args, versions);
@@ -663,6 +662,7 @@ async function main() {
     }
     const reportIdentities = {};
     for (const report of [oldReports.json, oldReports.html, newPdf.json, newPdf.html, newDocx.json, newDocx.html]) {
+      assert.ok(samePath(path.dirname(report.path), artifactRoot), `Retained report must be a sibling of upgrade.json: ${path.basename(report.path)}`);
       const after = await hashBoundedFile(report.path, MAX_REPORT_BYTES);
       assert.equal(after.sha256, report.sha256, 'Saved report bytes changed after export.');
       reportIdentities[path.basename(report.path)] = { bytes: after.bytes, sha256: after.sha256 };
