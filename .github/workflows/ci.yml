@@ -71,6 +71,8 @@ jobs:
           xvfb-run --auto-servernum npm run test:e2e
       - run: npm audit --audit-level=high
       - run: npm run package
+      - name: Write package checksum manifest
+        run: node scripts/checksums.mjs
       - name: Windows fresh archive acceptance
         if: runner.os == 'Windows'
         shell: pwsh
@@ -79,6 +81,38 @@ jobs:
           if ($archives.Count -ne 1) { throw 'Expected one Windows archive.' }
           Expand-Archive -LiteralPath $archives[0].FullName -DestinationPath artifacts/install
           node scripts/acceptance-v1.mjs --executable "${pwd}/artifacts/install/DocDiff Studio.exe"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Windows portable upgrade acceptance
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          $version = (Get-Content -Raw package.json | ConvertFrom-Json).version
+          if ($version -notmatch '^1\.\d+\.\d+$') {
+            Write-Host "Skipping old-to-stable upgrade check for non-stable package version $version."
+            exit 0
+          }
+          $runKey = "$env:GITHUB_RUN_ID-$env:GITHUB_RUN_ATTEMPT"
+          $inputRoot = Join-Path (Join-Path $pwd.Path 'artifacts') "upgrade-input-$runKey"
+          $oldInstallRoot = Join-Path $inputRoot 'old-0.1.0'
+          $newInstallRoot = Join-Path $inputRoot "target-$version"
+          if (Test-Path -LiteralPath $inputRoot) { throw 'Upgrade input directory already exists.' }
+          New-Item -ItemType Directory -Path $inputRoot | Out-Null
+          New-Item -ItemType Directory -Path $oldInstallRoot, $newInstallRoot | Out-Null
+          $oldName = 'docdiff-studio-0.1.0-win-x64.zip'
+          $oldPackage = Join-Path $inputRoot $oldName
+          $oldUrl = "https://github.com/Pastalikek65/docdiff-studio/releases/download/v0.1.0/$oldName"
+          curl.exe --fail --location --proto '=https' --proto-redir '=https' --retry 3 --retry-all-errors --connect-timeout 20 --max-time 300 --max-filesize 159242085 --silent --show-error $oldUrl --output $oldPackage
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          if ((Get-Item -LiteralPath $oldPackage).Length -ne [int64]159242085) { throw 'Pinned MVP archive size mismatch.' }
+          $oldHash = (Get-FileHash -Algorithm SHA256 -LiteralPath $oldPackage).Hash.ToLowerInvariant()
+          if ($oldHash -ne 'a7fe15312d7822454479d25d6f47c50c918ebee8804c311b571f85e7f5109f11') { throw 'Pinned MVP archive SHA-256 mismatch.' }
+          Expand-Archive -LiteralPath $oldPackage -DestinationPath $oldInstallRoot
+          $newPackage = (Resolve-Path "release/docdiff-studio-$version-win-x64.zip").Path
+          Expand-Archive -LiteralPath $newPackage -DestinationPath $newInstallRoot
+          $oldExecutable = Join-Path $oldInstallRoot 'DocDiff Studio.exe'
+          $newExecutable = Join-Path $newInstallRoot 'DocDiff Studio.exe'
+          if (!(Test-Path -LiteralPath $oldExecutable -PathType Leaf) -or !(Test-Path -LiteralPath $newExecutable -PathType Leaf)) { throw 'An expected package executable is missing.' }
+          node scripts/upgrade-acceptance.mjs --old-package $oldPackage --old-install-root $oldInstallRoot --old-executable $oldExecutable --new-package $newPackage --new-install-root $newInstallRoot --new-executable $newExecutable --expected-source-commit $env:GITHUB_SHA --sandbox true
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Linux fresh archive acceptance
         if: runner.os == 'Linux'
@@ -99,7 +133,50 @@ jobs:
           sudo chmod 4755 "${sandboxes[0]}"
           test "$(stat -c '%U:%G:%a' "${sandboxes[0]}")" = 'root:root:4755'
           xvfb-run --auto-servernum node scripts/acceptance-v1.mjs --executable "${executables[0]}"
-      - run: node scripts/checksums.mjs
+      - name: Linux portable upgrade acceptance
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          set -euo pipefail
+          new_version="$(node -e "process.stdout.write(JSON.parse(require('node:fs').readFileSync('package.json', 'utf8')).version)")"
+          if [[ ! "$new_version" =~ ^1\.[0-9]+\.[0-9]+$ ]]; then
+            echo "Skipping old-to-stable upgrade check for non-stable package version $new_version."
+            exit 0
+          fi
+          run_key="${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          input_root="$GITHUB_WORKSPACE/artifacts/upgrade-input-$run_key"
+          upgrade_root="/opt/docdiff-ci/upgrade-$run_key"
+          old_install_root="$upgrade_root/old-0.1.0"
+          new_install_root="$upgrade_root/target-$new_version"
+          test ! -e "$input_root"
+          test ! -e "$upgrade_root"
+          mkdir -m 700 -p "$input_root"
+          old_name='docdiff-studio-0.1.0-linux-x64.tar.gz'
+          old_package="$input_root/$old_name"
+          old_url="https://github.com/Pastalikek65/docdiff-studio/releases/download/v0.1.0/$old_name"
+          curl --fail --location --proto '=https' --proto-redir '=https' --retry 3 --retry-all-errors --connect-timeout 20 --max-time 300 --max-filesize 125034782 --silent --show-error "$old_url" --output "$old_package"
+          test "$(stat -c '%s' "$old_package")" = '125034782'
+          old_hash="$(sha256sum "$old_package" | cut -d ' ' -f1)"
+          test "$old_hash" = '9a8ae5d8f10ccfc488cc20ef611a1ad9ab13132d85b42ba5959934f455f796ee'
+          new_package="$GITHUB_WORKSPACE/release/docdiff-studio-$new_version-linux-x64.tar.gz"
+          test -f "$new_package"
+          sudo install -d -o root -g root -m 755 "/opt/docdiff-ci/upgrade-$run_key" "$old_install_root" "$new_install_root"
+          sudo tar --no-same-owner -xzf "$old_package" -C "$old_install_root"
+          sudo tar --no-same-owner -xzf "$new_package" -C "$new_install_root"
+          sudo chown -R root:root "/opt/docdiff-ci/upgrade-$run_key"
+          sudo chmod -R go-w "/opt/docdiff-ci/upgrade-$run_key"
+          mapfile -t old_executables < <(find "$old_install_root" -type f -name docdiff-studio -print)
+          mapfile -t new_executables < <(find "$new_install_root" -type f -name docdiff-studio -print)
+          mapfile -t old_sandboxes < <(find "$old_install_root" -type f -name chrome-sandbox -print)
+          mapfile -t new_sandboxes < <(find "$new_install_root" -type f -name chrome-sandbox -print)
+          test "${#old_executables[@]}" -eq 1
+          test "${#new_executables[@]}" -eq 1
+          test "${#old_sandboxes[@]}" -eq 1
+          test "${#new_sandboxes[@]}" -eq 1
+          sudo chmod 4755 "${old_sandboxes[0]}" "${new_sandboxes[0]}"
+          test "$(stat -c '%U:%G:%a' "${old_sandboxes[0]}")" = 'root:root:4755'
+          test "$(stat -c '%U:%G:%a' "${new_sandboxes[0]}")" = 'root:root:4755'
+          xvfb-run --auto-servernum node scripts/upgrade-acceptance.mjs --old-package "$old_package" --old-install-root "$old_install_root" --old-executable "${old_executables[0]}" --new-package "$new_package" --new-install-root "$new_install_root" --new-executable "${new_executables[0]}" --expected-source-commit "$GITHUB_SHA" --sandbox true
       - uses: actions/upload-artifact@v7.0.2
         if: always()
         with:
@@ -116,5 +193,14 @@ jobs:
             artifacts/acceptance-*/failure.png
             artifacts/acceptance-*/docx-review.png
             artifacts/acceptance-*/ocr-review.png
+            artifacts/upgrade-*/upgrade.json
+            artifacts/upgrade-*/mvp-review.json
+            artifacts/upgrade-*/mvp-review.html
+            artifacts/upgrade-*/upgrade-pdf.json
+            artifacts/upgrade-*/upgrade-pdf.html
+            artifacts/upgrade-*/upgrade-docx.json
+            artifacts/upgrade-*/upgrade-docx.html
+            artifacts/upgrade-*/failure.json
+            artifacts/upgrade-*/failure.png
             artifacts/startup-*/startup.json
             artifacts/startup-*/failure.json

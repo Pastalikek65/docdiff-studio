@@ -1,6 +1,16 @@
-# MVP verification record
+# Verification record
 
-## v1 candidate evidence
+## Qualified feature beta
+
+The [published v0.2.0 beta](https://github.com/Pastalikek65/docdiff-studio/releases/tag/v0.2.0) packages at source `717b7cda111b94f54b1e8654c8428a4206ed9da8` passed [CI 37884932867](https://github.com/Pastalikek65/docdiff-studio/actions/runs/37884932867): 89 tests across 18 files per platform, typecheck/build, full dependency audit, documented startup, and the actual 23-step source and freshly extracted package workflows on Windows Server 2025 and Ubuntu 24.04. The exact Windows CI ZIP also passed all 23 steps on Windows 11 Pro (`10.0.26300`). Native save IPC is real; acceptance simulates the dialog destination and does not claim manual picker testing.
+
+The collected packages are Windows ZIP SHA-256 `82c36622f6a2c98b8af36b645c5aed33c153346f313f054cb7011154b8aabac0` (180,548,837 bytes) and Linux tar.gz SHA-256 `8b98e7abf7d7b4c30728480e81c7eccb6f0b49dba16bbc16ea67cc774dc67471` (146,300,308 bytes). Independent inspection verified the original CI artifact digests, packaged application archives, source dependency pins, 203 PDF.js assets, 17 OCR assets, 23 listed OCR source/provenance records, both synthetic corpora, bundled notices and corresponding Liberation font source. Windows runtime notices are at the archive root; Linux notices are under the application directory. Repeated dependency names in the npm inventory represent legitimate nested copies; direct bundled versions are checked against the exact source pins.
+
+Independent final review bound the release files and checksums to the CI and additional Windows 11 evidence. The full development audit retains eight moderate build-tool findings and zero high/critical findings. The `idb-keyval` source-map mismatch remains explicitly disclosed; pinned provenance records do not prove complete compiled-runtime source mapping. See [support](support.md) and [scoped measurements](performance.md). Stable v1 additionally requires fresh exact-version package qualification and old-preview profile/report compatibility on both platforms; beta evidence alone does not satisfy that gate.
+
+## Earlier v1 integration evidence
+
+The initial local stable-preparation trial passed all nine portable-upgrade steps on Windows 11, using the pinned public MVP and a newly built 1.0.0 ZIP. A separate one-byte-corrupted MVP application-archive copy was rejected before either application launched. The local positive trial has tracked source changes and predates the final commit; it is harness/runtime evidence, not exact stable release qualification. The stable release requires fresh CI records and packages at its frozen commit on both platforms.
 
 The report-retaining follow-up [CI 37883334400](https://github.com/Pastalikek65/docdiff-studio/actions/runs/37883334400) passed Windows but failed the Linux source flow at keyboard focus timing. Its selected change had updated before the scheduled animation-frame focus callback ran. A separate actual-browser regression reproduced that ordering; the desktop harness now waits for focus with a three-second bound and retains strict assertions in both navigation directions. This run does not qualify a release. The captured table also exposed a UI counter that counted all compared cells; its correction has a regression test. The next source commit and both platform packages require fresh qualification.
 
