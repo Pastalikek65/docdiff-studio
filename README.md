@@ -4,19 +4,19 @@ Compare two document revisions locally, inspect text and visual changes, and sav
 
 [![CI](https://github.com/Pastalikek65/docdiff-studio/actions/workflows/ci.yml/badge.svg)](https://github.com/Pastalikek65/docdiff-studio/actions/workflows/ci.yml)
 
-DocDiff is for reviewing revised manuals, proposals and other documents where a changed number, word or page matters. The [published feature beta](https://github.com/Pastalikek65/docdiff-studio/releases/tag/v0.2.0) provides tested Windows and Linux x64 archives for PDF, supported DOCX, selected-page local English OCR and sequential batches. Download the latest qualified build from [Releases](https://github.com/Pastalikek65/docdiff-studio/releases). See the [support contract](docs/support.md) and [roadmap](docs/roadmap.md).
+DocDiff is for reviewing revised manuals, proposals and other documents where a changed number, word or page matters. The published [stable v1.0.0 release](https://github.com/Pastalikek65/docdiff-studio/releases/tag/v1.0.0) provides qualified Windows and Linux x64 archives for PDF, supported DOCX, selected-page local English OCR and sequential batches. See its exact-package evidence in [verification](docs/verification.md), the [support contract](docs/support.md) and [roadmap](docs/roadmap.md).
 
 ![Actual comparison of the synthetic word and number fixtures](examples/outputs/review.png)
 
 See the [generated example HTML report](examples/outputs/comparison.html) or compare the included PDFs yourself. The screenshot and report come from the real desktop acceptance flow.
 
-See the real [DOCX paragraph/table review](examples/outputs/docx-review.png), [DOCX HTML report](examples/outputs/docx-comparison.html) and [local OCR review](examples/outputs/ocr-review.png) from its actual Windows desktop flow. These examples show actual behavior. The feature beta has passed exact-package qualification; stable releases additionally require old-preview profile/report compatibility.
+See the real [DOCX paragraph/table review](examples/outputs/docx-review.png), [DOCX HTML report](examples/outputs/docx-comparison.html) and [local OCR review](examples/outputs/ocr-review.png) from its actual Windows desktop flow. These examples show actual behavior. Stable v1.0.0 passed exact-package qualification on Windows and Linux, plus a separate Windows 11 package run and old-preview profile/report compatibility.
 
 ## Install
 
 Download the archive for your platform from [Releases](https://github.com/Pastalikek65/docdiff-studio/releases) and verify it with the release's `SHA256SUMS.txt`. On Windows, extract the complete ZIP and run `DocDiff Studio.exe`. Linux setup requires the sandbox permissions and application-specific AppArmor instructions in the release notes. Archives are unsigned; Node.js is not needed for the packaged app.
 
-Each qualified release includes `verification.json` with exact source/package hashes and successful source and extracted-package flows on Windows Server 2025 and Ubuntu 24.04. The same Windows archive additionally passed on Windows 11. The release record distinguishes previews from stable versions; use the evidence for your exact downloaded build.
+The v1.0.0 release includes `verification.json` with exact source/package hashes and successful source and extracted-package flows on Windows Server 2025 and Ubuntu 24.04. The same Windows archive additionally passed on Windows 11. Check the evidence for the exact build you download; the earlier 0.1.0 and 0.2.0 releases remain previews.
 
 ## Run development source
 

@@ -1,8 +1,12 @@
 # Changelog
 
-## 1.0.0 — release candidate
+## 1.0.0 — stable release
 
-The feature beta scope below is retained. Fresh exact-version package qualification and old-MVP profile/report compatibility are required on Windows and Linux before stable publication. See [verification](docs/verification.md).
+- Publishes the PDF, supported DOCX, selected-page local English OCR, exact unique-text moves, and sequential batch-review scope introduced in 0.2.0.
+- Qualifies the exact Windows and Linux packages, and verifies the 0.1.0 PDF preview's profile and report compatibility on both platforms.
+- Retains the schema-1 PDF report format and adds stable schema-2 PDF/DOCX and batch reports.
+
+[Published stable release](https://github.com/Pastalikek65/docdiff-studio/releases/tag/v1.0.0): 89 tests across 18 files and 23-step actual desktop source/package flows passed on Windows and Linux; the same Windows package passed on Windows 11. See [verification](docs/verification.md).
 
 ## 0.2.0 — published feature beta
 
@@ -23,4 +27,4 @@ The feature beta scope below is retained. Fresh exact-version package qualificat
 - Cancel the dedicated worker without creating a completed result.
 - Include a deterministic synthetic corpus, real desktop screenshot/report, license inventory and source/platform acceptance harnesses.
 
-This is a preview. See [support](docs/support.md), [verification](docs/verification.md) and [roadmap](docs/roadmap.md) for tested scope and pending v1 features.
+This remains a preview release. The later stable v1 scope and its qualification are documented in [support](docs/support.md), [verification](docs/verification.md) and [roadmap](docs/roadmap.md).

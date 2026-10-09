@@ -1,6 +1,6 @@
 # Türkçe hızlı başlangıç
 
-DocDiff Studio belge sürümlerini bilgisayarınızda karşılaştırır. [Yayımlanan v0.2.0 beta](https://github.com/Pastalikek65/docdiff-studio/releases/tag/v0.2.0), PDF, desteklenen DOCX, seçili taranmış sayfalarda yerel İngilizce OCR ve toplu karşılaştırma için doğrulanmış Windows/Linux x64 paketleri içerir. [Releases](https://github.com/Pastalikek65/docdiff-studio/releases) sayfasındaki en güncel doğrulanmış sürümü seçin; yayın kaydı beta/kararlı ayrımını ve tam paket kanıtını gösterir.
+DocDiff Studio belge sürümlerini bilgisayarınızda karşılaştırır. Yayımlanan [kararlı v1.0.0](https://github.com/Pastalikek65/docdiff-studio/releases/tag/v1.0.0), PDF, desteklenen DOCX, seçili taranmış sayfalarda yerel İngilizce OCR ve toplu karşılaştırma için doğrulanmış Windows/Linux x64 paketleri içerir. [Yayın kaydı](verification.md), tam paket kanıtını ve destek sınırlarını içerir; önceki 0.1.0 ve 0.2.0 sürümleri önizlemedir.
 
 Windows'ta ZIP'i indirin, `SHA256SUMS.txt` ile doğrulayın, bütün dosyaları çıkarın ve `DocDiff Studio.exe` çalıştırın. Paket için Node.js gerekmez. Linux'ta grafik oturumu ve Electron sistem kütüphaneleri gerekir; yayın notlarındaki sandbox izinlerini ve gerekiyorsa uygulamaya özel AppArmor profilini kurun, uygulamayı normal kullanıcıyla açın. Paketler imzasızdır.
 
@@ -21,4 +21,4 @@ Taranmış sayfalarda metin alınamazsa **Review needed** sonucu gösterilir. G�
 
 Dosyalar sunucuya gönderilmez. HTML/JSON raporları belgenin metnini ve görüntülerini içerebilir; paylaşmadan önce inceleyin. Kaynak dosyalar karşılaştırmada değişmez. Hesap, abonelik veya ücretli API gerekmez.
 
-Yayımlanan özellik betası iki platformda doğrulandı; kararlı sürüm kapısı ayrıca eski ön sürümden profil/rapor uyumluluğunu ve yeni sürümün tam paket testlerini gerektirir. [Destek sınırları](support.md), [rapor formatları](report-formats.md) ve [yol haritası](roadmap.md) kapsamı açıklar.
+Kararlı v1.0.0 Windows ve Linux'ta, eski PDF önizlemesinden profil/rapor uyumluluğu dâhil olmak üzere doğrulandı; ayrıca aynı Windows paketi Windows 11'de test edildi. [Destek sınırları](support.md), [rapor formatları](report-formats.md) ve [yol haritası](roadmap.md) kapsamı açıklar.
